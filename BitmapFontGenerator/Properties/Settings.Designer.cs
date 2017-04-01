@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BitmapFontGenerator.Properties
+namespace bfg.Properties
 {
 
 

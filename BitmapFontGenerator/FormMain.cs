@@ -12,9 +12,15 @@ namespace BitmapFontGenerator
 {
     public partial class FormMain : Form
     {
+        BitmapFontGenerator bitmapFontGenerator;
+
         public FormMain()
         {
             InitializeComponent();
+
+            bitmapFontGenerator = new BitmapFontGenerator();
+            BitmapFontGenerator.Settings settings = BitmapFontGenerator.CreateDefaultSettings();
+            pictureBoxPreview.Image = bitmapFontGenerator.Generate(settings);
         }
     }
 }

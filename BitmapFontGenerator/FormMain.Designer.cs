@@ -35,6 +35,7 @@
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
             this.pictureBoxPreview = new System.Windows.Forms.PictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.exportEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             this.panelMain.SuspendLayout();
@@ -50,6 +51,8 @@
             // 
             // fileFToolStripMenuItem
             // 
+            this.fileFToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportEToolStripMenuItem});
             this.fileFToolStripMenuItem.Name = "fileFToolStripMenuItem";
             resources.ApplyResources(this.fileFToolStripMenuItem, "fileFToolStripMenuItem");
             // 
@@ -65,7 +68,7 @@
             // 
             // pictureBoxPreview
             // 
-            this.pictureBoxPreview.BackColor = System.Drawing.Color.Black;
+            this.pictureBoxPreview.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.pictureBoxPreview, "pictureBoxPreview");
             this.pictureBoxPreview.Name = "pictureBoxPreview";
             this.pictureBoxPreview.TabStop = false;
@@ -75,6 +78,11 @@
             resources.ApplyResources(this.panelMain, "panelMain");
             this.panelMain.Controls.Add(this.pictureBoxPreview);
             this.panelMain.Name = "panelMain";
+            // 
+            // exportEToolStripMenuItem
+            // 
+            this.exportEToolStripMenuItem.Name = "exportEToolStripMenuItem";
+            resources.ApplyResources(this.exportEToolStripMenuItem, "exportEToolStripMenuItem");
             // 
             // FormMain
             // 
@@ -103,6 +111,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpHToolStripMenuItem;
         private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.ToolStripMenuItem exportEToolStripMenuItem;
     }
 }
 

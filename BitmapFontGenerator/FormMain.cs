@@ -13,6 +13,7 @@ namespace BitmapFontGenerator
     public partial class FormMain : Form
     {
         BitmapFontGenerator bitmapFontGenerator;
+        Bitmap fontBitmap;
 
         public FormMain()
         {
@@ -20,7 +21,10 @@ namespace BitmapFontGenerator
 
             bitmapFontGenerator = new BitmapFontGenerator();
             BitmapFontGenerator.Settings settings = BitmapFontGenerator.CreateDefaultSettings();
-            pictureBoxPreview.Image = bitmapFontGenerator.Generate(settings);
+            fontBitmap = bitmapFontGenerator.Generate(settings);
+            pictureBoxPreview.Image = fontBitmap;
+            
+            //fontBitmap.Save("font.png", System.Drawing.Imaging.ImageFormat.Png);
         }
     }
 }

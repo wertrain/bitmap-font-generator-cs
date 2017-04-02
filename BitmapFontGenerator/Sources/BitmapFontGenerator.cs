@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.IO;
 using System.Text;
 
 namespace BitmapFontGenerator
@@ -12,7 +13,6 @@ namespace BitmapFontGenerator
             private Color textColor;
             private Font textFont;
             private Color backGroundColor;
-            private int imageWidth, imageHeight;
 
             public int TextFontSize
             {
@@ -23,6 +23,10 @@ namespace BitmapFontGenerator
             {
                 get { return this.textMarginSize; }
                 set { this.textMarginSize = value; }
+            }
+            public int TextSizeWithMargin
+            {
+                get { return (this.TextFontSize + this.TextMarginSize); }
             }
             public Color TextColor
             {
@@ -39,118 +43,59 @@ namespace BitmapFontGenerator
                 get { return this.backGroundColor; }
                 set { this.backGroundColor = value; }
             }
-            public int ImageWidth
-            {
-                get { return this.imageWidth; }
-                set { this.imageWidth = value; }
-            }
-            public int ImageHeight
-            {
-                get { return this.imageHeight; }
-                set { this.imageHeight = value; }
-            }
         };
 
         public static Settings CreateDefaultSettings()
         {
             Settings settings = new Settings();
-            settings.TextColor = Color.White;
+            settings.TextColor = Color.Black;
             settings.TextFontSize = 16;
             settings.TextMarginSize = (settings.TextFontSize / 2);
             settings.TextFont = new Font("Meiryo", settings.TextFontSize);
-            settings.ImageWidth = 1024;
-            settings.ImageHeight = 7942;
-            settings.BackGroundColor = Color.Black;
+            settings.BackGroundColor = Color.White;
             return settings;
         }
 
         public Bitmap Generate(Settings settings)
         {
             bool areaMargin = false;
-            int textSizeWithMargin = settings.TextFontSize + settings.TextMarginSize;
+            int textSizeWithMargin = settings.TextSizeWithMargin;
             Bitmap bitmap = new Bitmap(
                 textSizeWithMargin * 16 + settings.TextMarginSize / 2,
-                textSizeWithMargin * (331 + (areaMargin ? 3 : 0)) +
+                textSizeWithMargin * (329 + (areaMargin ? 3 : 0)) +
                 settings.TextMarginSize / 2);
 
             Graphics graphics = Graphics.FromImage(bitmap);
+            //graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+            //graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             graphics.Clear(settings.BackGroundColor);
 
+            string[][] stringList =
+            {
+                ShiftJisStringList.HANKAKU_LIST,
+                ShiftJisStringList.ZENKAKU_LIST,
+                ShiftJisStringList.KISHUIZON_LIST,
+                ShiftJisStringList.DAI1SUIJUN_LIST,
+            };
+
             int pointY = 0;
-            // 半角文字エリア
-            for (int y = 0; y < 14; ++y)
+            for (int j = 0; j < stringList.Length; ++j)
             {
-                for (int x = 0; x < 16; ++x)
+                int x = 0;
+                for (int i = 0; i < stringList[j].Length; ++i)
                 {
-                    byte[] b = { (byte)((y << 4) | x) };
-                    string str = Encoding.GetEncoding(932).GetString(b);
-                    graphics.DrawString(str, 
-                        settings.TextFont, 
-                        new SolidBrush(settings.TextColor),
-                        x * textSizeWithMargin,
-                        pointY);
-                }
-                pointY += textSizeWithMargin;
-            }
-
-            if (areaMargin) pointY += textSizeWithMargin;
-
-            // 全角文字エリア
-            int code = 0x8140;
-            for (int y = 0; y < 56; ++y)
-            {
-                for (int x = 0; x < 16; ++x)
-                {
-                    byte[] b = { (byte)(code >> 8), (byte)code };
-                    string str = Encoding.GetEncoding(932).GetString(b);
-                    graphics.DrawString(str,
+                    graphics.DrawString(stringList[j][i],
                         settings.TextFont,
                         new SolidBrush(settings.TextColor),
                         x * textSizeWithMargin,
                         pointY);
-                    ++code;
+                    if (++x >= 16)
+                    {
+                        x = 0;
+                        pointY += textSizeWithMargin;
+                    }
                 }
-                pointY += textSizeWithMargin;
-            }
-
-            if (areaMargin) pointY += textSizeWithMargin;
-
-            // 機種依存文字エリア
-            code = 0x8740;
-            for (int y = 0; y < 6; ++y)
-            {
-                for (int x = 0; x < 16; ++x)
-                {
-                    byte[] b = { (byte)(code >> 8), (byte)code };
-                    string str = Encoding.GetEncoding(932).GetString(b);
-                    graphics.DrawString(str,
-                        settings.TextFont,
-                        new SolidBrush(settings.TextColor),
-                        x * textSizeWithMargin,
-                        pointY);
-                    ++code;
-                }
-                pointY += textSizeWithMargin;
-            }
-
-            if (areaMargin) pointY += textSizeWithMargin;
-
-            // 第一水準漢字
-            code = 0x8890;
-            for (int y = 0; y < 255; ++y)
-            {
-                for (int x = 0; x < 16; ++x)
-                {
-                    byte[] b = { (byte)(code >> 8), (byte)code };
-                    string str = Encoding.GetEncoding(932).GetString(b);
-                    graphics.DrawString(str,
-                        settings.TextFont,
-                        new SolidBrush(settings.TextColor),
-                        x * textSizeWithMargin,
-                        pointY);
-                    ++code;
-                }
-                pointY += textSizeWithMargin;
+                if (areaMargin) pointY += textSizeWithMargin;
             }
 
             return bitmap;

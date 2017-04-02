@@ -38,6 +38,10 @@
             this.panelPreview = new System.Windows.Forms.Panel();
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.panelFontSettings = new System.Windows.Forms.Panel();
+            this.groupBoxFont = new System.Windows.Forms.GroupBox();
+            this.comboBoxInstalledFont = new System.Windows.Forms.ComboBox();
+            this.textBoxUserFont = new System.Windows.Forms.TextBox();
+            this.buttonSelectFont = new System.Windows.Forms.Button();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             this.panelPreview.SuspendLayout();
@@ -45,6 +49,8 @@
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
             this.splitContainerMain.SuspendLayout();
+            this.panelFontSettings.SuspendLayout();
+            this.groupBoxFont.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripMain
@@ -107,8 +113,37 @@
             // 
             // panelFontSettings
             // 
+            this.panelFontSettings.Controls.Add(this.groupBoxFont);
             resources.ApplyResources(this.panelFontSettings, "panelFontSettings");
             this.panelFontSettings.Name = "panelFontSettings";
+            // 
+            // groupBoxFont
+            // 
+            this.groupBoxFont.Controls.Add(this.comboBoxInstalledFont);
+            this.groupBoxFont.Controls.Add(this.textBoxUserFont);
+            this.groupBoxFont.Controls.Add(this.buttonSelectFont);
+            resources.ApplyResources(this.groupBoxFont, "groupBoxFont");
+            this.groupBoxFont.Name = "groupBoxFont";
+            this.groupBoxFont.TabStop = false;
+            // 
+            // comboBoxInstalledFont
+            // 
+            this.comboBoxInstalledFont.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxInstalledFont.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBoxInstalledFont, "comboBoxInstalledFont");
+            this.comboBoxInstalledFont.Name = "comboBoxInstalledFont";
+            this.comboBoxInstalledFont.TextChanged += new System.EventHandler(this.comboBoxInstalledFont_TextChanged);
+            // 
+            // textBoxUserFont
+            // 
+            resources.ApplyResources(this.textBoxUserFont, "textBoxUserFont");
+            this.textBoxUserFont.Name = "textBoxUserFont";
+            // 
+            // buttonSelectFont
+            // 
+            resources.ApplyResources(this.buttonSelectFont, "buttonSelectFont");
+            this.buttonSelectFont.Name = "buttonSelectFont";
+            this.buttonSelectFont.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
@@ -128,6 +163,9 @@
             this.splitContainerMain.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).EndInit();
             this.splitContainerMain.ResumeLayout(false);
+            this.panelFontSettings.ResumeLayout(false);
+            this.groupBoxFont.ResumeLayout(false);
+            this.groupBoxFont.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,6 +182,10 @@
         private System.Windows.Forms.ToolStripMenuItem exportEToolStripMenuItem;
         private System.Windows.Forms.SplitContainer splitContainerMain;
         private System.Windows.Forms.Panel panelFontSettings;
+        private System.Windows.Forms.GroupBox groupBoxFont;
+        private System.Windows.Forms.ComboBox comboBoxInstalledFont;
+        private System.Windows.Forms.TextBox textBoxUserFont;
+        private System.Windows.Forms.Button buttonSelectFont;
     }
 }
 

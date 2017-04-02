@@ -6,6 +6,8 @@ namespace BitmapFontGenerator
 {
     class BitmapFontGenerator
     {
+        private const string defaultFontName = "メイリオ";
+
         public class Settings
         {
             private int textFontSize;
@@ -33,6 +35,10 @@ namespace BitmapFontGenerator
                 get { return this.textColor; }
                 set { this.textColor = value; }
             }
+            public string TextFontName
+            {
+                set { this.textFont = new Font(value, this.TextFontSize); }
+            }
             public Font TextFont
             {
                 get { return this.textFont; }
@@ -51,7 +57,7 @@ namespace BitmapFontGenerator
             settings.TextColor = Color.Black;
             settings.TextFontSize = 16;
             settings.TextMarginSize = (settings.TextFontSize / 2);
-            settings.TextFont = new Font("Meiryo", settings.TextFontSize);
+            settings.TextFont = new Font(defaultFontName, settings.TextFontSize);
             settings.BackGroundColor = Color.White;
             return settings;
         }

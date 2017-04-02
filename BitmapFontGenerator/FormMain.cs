@@ -12,19 +12,38 @@ namespace BitmapFontGenerator
 {
     public partial class FormMain : Form
     {
-        BitmapFontGenerator bitmapFontGenerator;
-        Bitmap fontBitmap;
+        private BitmapFontGenerator bitmapFontGenerator;
+        private BitmapFontGenerator.Settings generatorSettings;
+        private Bitmap fontBitmap;
 
         public FormMain()
         {
             InitializeComponent();
 
+            foreach (FontFamily item in FontFamily.Families)
+            {
+                if (item.IsStyleAvailable(FontStyle.Regular))
+                {
+                    comboBoxInstalledFont.Items.Add(item.Name);
+                }
+            }
+
             bitmapFontGenerator = new BitmapFontGenerator();
-            BitmapFontGenerator.Settings settings = BitmapFontGenerator.CreateDefaultSettings();
-            fontBitmap = bitmapFontGenerator.Generate(settings);
+            generatorSettings = BitmapFontGenerator.CreateDefaultSettings();
+            fontBitmap = bitmapFontGenerator.Generate(generatorSettings);
             pictureBoxPreview.Image = fontBitmap;
-            
+
+            int index = comboBoxInstalledFont.FindStringExact(generatorSettings.TextFont.Name);
+            comboBoxInstalledFont.SelectedIndex = index;
+
             //fontBitmap.Save("font.png", System.Drawing.Imaging.ImageFormat.Png);
+        }
+
+        private void comboBoxInstalledFont_TextChanged(object sender, EventArgs e)
+        {
+            generatorSettings.TextFontName = comboBoxInstalledFont.SelectedItem.ToString();
+            fontBitmap = bitmapFontGenerator.Generate(generatorSettings);
+            pictureBoxPreview.Image = fontBitmap;
         }
     }
 }

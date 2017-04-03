@@ -6,7 +6,7 @@ namespace BitmapFontGenerator
 {
     class BitmapFontGenerator
     {
-        private const string defaultFontName = "メイリオ";
+        private const string defaultFontName = "Meiryo";
 
         public class Settings
         {

@@ -30,8 +30,7 @@ namespace BitmapFontGenerator
 
             bitmapFontGenerator = new BitmapFontGenerator();
             generatorSettings = BitmapFontGenerator.CreateDefaultSettings();
-            fontBitmap = bitmapFontGenerator.Generate(generatorSettings);
-            pictureBoxPreview.Image = fontBitmap;
+            generateFontBitmap();
 
             int index = comboBoxInstalledFont.FindStringExact(generatorSettings.TextFont.Name);
             comboBoxInstalledFont.SelectedIndex = index;
@@ -39,11 +38,16 @@ namespace BitmapFontGenerator
             //fontBitmap.Save("font.png", System.Drawing.Imaging.ImageFormat.Png);
         }
 
+        private void generateFontBitmap()
+        {
+            fontBitmap = bitmapFontGenerator.Generate(generatorSettings);
+            pictureBoxPreview.Image = fontBitmap;
+        }
+
         private void comboBoxInstalledFont_TextChanged(object sender, EventArgs e)
         {
             generatorSettings.TextFontName = comboBoxInstalledFont.SelectedItem.ToString();
-            fontBitmap = bitmapFontGenerator.Generate(generatorSettings);
-            pictureBoxPreview.Image = fontBitmap;
+            generateFontBitmap();
         }
     }
 }

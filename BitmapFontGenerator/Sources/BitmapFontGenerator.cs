@@ -64,25 +64,35 @@ namespace BitmapFontGenerator
 
         public Bitmap Generate(Settings settings)
         {
-            bool areaMargin = false;
-            int textSizeWithMargin = settings.TextSizeWithMargin;
-            Bitmap bitmap = new Bitmap(
-                textSizeWithMargin * 16 + settings.TextMarginSize / 2,
-                textSizeWithMargin * (329 + (areaMargin ? 3 : 0)) +
-                settings.TextMarginSize / 2);
-
-            Graphics graphics = Graphics.FromImage(bitmap);
-            //graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
-            //graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            graphics.Clear(settings.BackGroundColor);
-
             string[][] stringList =
             {
                 ShiftJisStringList.HANKAKU_LIST,
                 ShiftJisStringList.ZENKAKU_LIST,
                 ShiftJisStringList.KISHUIZON_LIST,
                 ShiftJisStringList.DAI1SUIJUN_LIST,
+                ShiftJisStringList.DAI2SUIJUN_LIST,
             };
+            int[] ylengthList =
+            {
+                12, 56, 6, 255, 286
+            };
+            int heightLength = 0;
+            for (int j = 0; j < stringList.Length; ++j)
+            {
+                heightLength += ylengthList[j];
+            }
+
+            bool areaMargin = true; // true にするとリストごとに一行空白を作る
+            int textSizeWithMargin = settings.TextSizeWithMargin;
+            Bitmap bitmap = new Bitmap(
+                textSizeWithMargin * 16 + settings.TextMarginSize / 2,
+                textSizeWithMargin * (heightLength + (areaMargin ? 4 : 0)) +
+                settings.TextMarginSize / 2);
+
+            Graphics graphics = Graphics.FromImage(bitmap);
+            //graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+            //graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            graphics.Clear(settings.BackGroundColor);
 
             int pointY = 0;
             for (int j = 0; j < stringList.Length; ++j)

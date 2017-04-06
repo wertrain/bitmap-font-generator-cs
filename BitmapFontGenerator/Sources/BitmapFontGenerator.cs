@@ -64,18 +64,9 @@ namespace BitmapFontGenerator
 
         public Bitmap Generate(Settings settings)
         {
-            string[][] stringList =
-            {
-                ShiftJisStringList.HANKAKU_LIST,
-                ShiftJisStringList.ZENKAKU_LIST,
-                ShiftJisStringList.KISHUIZON_LIST,
-                ShiftJisStringList.DAI1SUIJUN_LIST,
-                ShiftJisStringList.DAI2SUIJUN_LIST,
-            };
-            int[] ylengthList =
-            {
-                12, 56, 6, 255, 286
-            };
+            string[][] stringList = ShiftJisStringList.GetAllList();
+            int[] ylengthList = ShiftJisStringList.GetYLengthList();
+
             int heightLength = 0;
             for (int j = 0; j < stringList.Length; ++j)
             {

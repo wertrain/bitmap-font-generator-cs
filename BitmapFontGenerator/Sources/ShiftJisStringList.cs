@@ -8,7 +8,7 @@ namespace BitmapFontGenerator
 {
     class ShiftJisStringList
     {
-        public static string[] HANKAKU_LIST =
+        private static string[] hankakuList =
         {
             " ","!","\"","#","$","%","&","'","(",")","*","+",",","-",".","/",
             "0","1","2","3","4","5","6","7","8","9",":",";","<","=",">","?",
@@ -24,7 +24,7 @@ namespace BitmapFontGenerator
             "ﾐ","ﾑ","ﾒ","ﾓ","ﾔ","ﾕ","ﾖ","ﾗ","ﾘ","ﾙ","ﾚ","ﾛ","ﾜ","ﾝ","ﾞ","ﾟ"
         };
 
-        public static string[] ZENKAKU_LIST =
+        private static string[] zenkakuList =
         {
             "　","、","。","，","．","・","：","；","？","！","゛","゜","´","｀","¨","＾",
             "￣","＿","ヽ","ヾ","ゝ","ゞ","〃","仝","々","〆","〇","ー","―","‐","／","＼",
@@ -85,7 +85,7 @@ namespace BitmapFontGenerator
         };
 
 
-        public static string[] KISHUIZON_LIST =
+        private static string[] kishuizonList =
         {
             "①","②","③","④","⑤","⑥","⑦","⑧","⑨","⑩","⑪","⑫","⑬","⑭","⑮","⑯",
             "⑰","⑱","⑲","⑳","Ⅰ","Ⅱ","Ⅲ","Ⅳ","Ⅴ","Ⅵ","Ⅶ","Ⅷ","Ⅸ","Ⅹ","・","㍉",
@@ -95,7 +95,7 @@ namespace BitmapFontGenerator
             "≒","≡","∫","∮","∑","√","⊥","∠","∟","⊿","∵","∩","∪","・","・","・",
         };
 
-        public static string[] DAI1SUIJUN_LIST =
+        private static string[] dai1suijunKanjiList =
         {
             "・","・","・","・","・","・","・","・","・","・","・","・","・","・","・","亜",
             "唖","娃","阿","哀","愛","挨","姶","逢","葵","茜","穐","悪","握","渥","旭","葦",
@@ -354,7 +354,7 @@ namespace BitmapFontGenerator
             "湾","碗","腕","・","・","・","・","・","・","・","・","・","・","・","・","・"
         };
 
-        public static string[] DAI2SUIJUN_LIST =
+        public static string[] dai2suijunKanjiList =
         {
             "・","・","・","・","・","・","・","・","・","・","・","・","・","・","・","弌",
             "丐","丕","个","丱","丶","丼","丿","乂","乖","乘","亂","亅","豫","亊","舒","弍",
@@ -644,5 +644,39 @@ namespace BitmapFontGenerator
             "齔","齣","齟","齠","齡","齦","齧","齬","齪","齷","齲","齶","龕","龜","龠","堯",
             "槇","遙","瑤","凜","熙","・","・","・","・","・","・","・","・","・","・","・"
         };
+
+        public static string[] HANKAKU_LIST { get => hankakuList; }
+        public static string[] ZENKAKU_LIST { get => zenkakuList; }
+        public static string[] KISHUIZON_LIST { get => kishuizonList; }
+        public static string[] DAI1SUIJUN_LIST { get => dai1suijunKanjiList; }
+        public static string[] DAI2SUIJUN_LIST { get => dai2suijunKanjiList; }
+
+        /// <summary>
+        /// すべてのリストを配列で取得します。
+        /// </summary>
+        /// <returns>すべてのリストの配列</returns>
+        public static string[][] GetAllList()
+        {
+           return new string[][]
+           {
+                ShiftJisStringList.hankakuList,
+                ShiftJisStringList.zenkakuList,
+                ShiftJisStringList.kishuizonList,
+                ShiftJisStringList.dai1suijunKanjiList,
+                ShiftJisStringList.dai2suijunKanjiList,
+            };
+        }
+
+        /// <summary>
+        /// 各リストのY方向の高さを返します。
+        /// </summary>
+        /// <returns>Y方向の高さの配列</returns>
+        public static int[] GetYLengthList()
+        {
+            return new int[]
+            {
+                12, 56, 6, 255, 286
+            };
+        }
     }
 }

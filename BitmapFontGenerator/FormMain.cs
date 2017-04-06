@@ -49,5 +49,13 @@ namespace BitmapFontGenerator
             generatorSettings.TextFontName = comboBoxInstalledFont.SelectedItem.ToString();
             generateFontBitmap();
         }
+
+        private void buttonSelectFont_Click(object sender, EventArgs e)
+        {
+            if (openFileDialogSelectFont.ShowDialog() == DialogResult.OK)
+            {
+                textBoxUserFont.Text = openFileDialogSelectFont.FileName;
+            }
+        }
     }
 }

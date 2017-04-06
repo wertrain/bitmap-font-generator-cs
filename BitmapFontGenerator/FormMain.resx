@@ -261,6 +261,135 @@
   <data name="&gt;&gt;splitContainerMain.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;groupBoxFont.Name" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFont.Parent" xml:space="preserve">
+    <value>panelFontSettings</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFont.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelFontSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelFontSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panelFontSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 511</value>
+  </data>
+  <data name="panelFontSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelFontSettings.Name" xml:space="preserve">
+    <value>panelFontSettings</value>
+  </data>
+  <data name="&gt;&gt;panelFontSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelFontSettings.Parent" xml:space="preserve">
+    <value>splitContainerMain.Panel2</value>
+  </data>
+  <data name="&gt;&gt;panelFontSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.Panel2.Name" xml:space="preserve">
+    <value>splitContainerMain.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.Panel2.Parent" xml:space="preserve">
+    <value>splitContainerMain</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainerMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 515</value>
+  </data>
+  <data name="splitContainerMain.SplitterDistance" type="System.Int32, mscorlib">
+    <value>497</value>
+  </data>
+  <data name="splitContainerMain.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.Name" xml:space="preserve">
+    <value>splitContainerMain</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInstalledFont.Name" xml:space="preserve">
+    <value>comboBoxInstalledFont</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInstalledFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInstalledFont.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInstalledFont.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBoxUserFont.Name" xml:space="preserve">
+    <value>textBoxUserFont</value>
+  </data>
+  <data name="&gt;&gt;textBoxUserFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxUserFont.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;textBoxUserFont.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectFont.Name" xml:space="preserve">
+    <value>buttonSelectFont</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectFont.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectFont.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBoxFont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 28</value>
+  </data>
+  <data name="groupBoxFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 91</value>
+  </data>
+  <data name="groupBoxFont.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupBoxFont.Text" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFont.Name" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFont.Parent" xml:space="preserve">
+    <value>panelFontSettings</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFont.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="comboBoxInstalledFont.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 21</value>
   </data>
@@ -330,86 +459,11 @@
   <data name="&gt;&gt;buttonSelectFont.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="groupBoxFont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 28</value>
-  </data>
-  <data name="groupBoxFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 91</value>
-  </data>
-  <data name="groupBoxFont.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="groupBoxFont.Text" xml:space="preserve">
-    <value>Font</value>
-  </data>
-  <data name="&gt;&gt;groupBoxFont.Name" xml:space="preserve">
-    <value>groupBoxFont</value>
-  </data>
-  <data name="&gt;&gt;groupBoxFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxFont.Parent" xml:space="preserve">
-    <value>panelFontSettings</value>
-  </data>
-  <data name="&gt;&gt;groupBoxFont.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panelFontSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panelFontSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panelFontSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 511</value>
-  </data>
-  <data name="panelFontSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panelFontSettings.Name" xml:space="preserve">
-    <value>panelFontSettings</value>
-  </data>
-  <data name="&gt;&gt;panelFontSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelFontSettings.Parent" xml:space="preserve">
-    <value>splitContainerMain.Panel2</value>
-  </data>
-  <data name="&gt;&gt;panelFontSettings.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.Panel2.Name" xml:space="preserve">
-    <value>splitContainerMain.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.Panel2.Parent" xml:space="preserve">
-    <value>splitContainerMain</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainerMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>784, 515</value>
-  </data>
-  <data name="splitContainerMain.SplitterDistance" type="System.Int32, mscorlib">
-    <value>497</value>
-  </data>
-  <data name="splitContainerMain.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.Name" xml:space="preserve">
-    <value>splitContainerMain</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <metadata name="openFileDialogSelectFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>268, 17</value>
+  </metadata>
+  <data name="openFileDialogSelectFont.Filter" xml:space="preserve">
+    <value>TrueType(*.ttf)|*.ttf|OpenType(*.otf)|*.otf|All Files(*.*)|*.*</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2253,6 +2307,12 @@
   </data>
   <data name="&gt;&gt;helpHToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialogSelectFont.Name" xml:space="preserve">
+    <value>openFileDialogSelectFont</value>
+  </data>
+  <data name="&gt;&gt;openFileDialogSelectFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMain</value>

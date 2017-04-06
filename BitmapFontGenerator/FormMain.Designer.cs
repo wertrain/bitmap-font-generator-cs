@@ -42,6 +42,7 @@
             this.comboBoxInstalledFont = new System.Windows.Forms.ComboBox();
             this.textBoxUserFont = new System.Windows.Forms.TextBox();
             this.buttonSelectFont = new System.Windows.Forms.Button();
+            this.openFileDialogSelectFont = new System.Windows.Forms.OpenFileDialog();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             this.panelPreview.SuspendLayout();
@@ -144,6 +145,12 @@
             resources.ApplyResources(this.buttonSelectFont, "buttonSelectFont");
             this.buttonSelectFont.Name = "buttonSelectFont";
             this.buttonSelectFont.UseVisualStyleBackColor = true;
+            this.buttonSelectFont.Click += new System.EventHandler(this.buttonSelectFont_Click);
+            // 
+            // openFileDialogSelectFont
+            // 
+            resources.ApplyResources(this.openFileDialogSelectFont, "openFileDialogSelectFont");
+            this.openFileDialogSelectFont.RestoreDirectory = true;
             // 
             // FormMain
             // 
@@ -186,6 +193,7 @@
         private System.Windows.Forms.ComboBox comboBoxInstalledFont;
         private System.Windows.Forms.TextBox textBoxUserFont;
         private System.Windows.Forms.Button buttonSelectFont;
+        private System.Windows.Forms.OpenFileDialog openFileDialogSelectFont;
     }
 }
 

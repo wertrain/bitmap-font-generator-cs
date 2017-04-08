@@ -11,12 +11,14 @@ namespace BitmapFontGenerator
 
         public class Settings
         {
+            private Font textFont;
             private int textFontSize;
             private int textMarginSize;
             private Color textColor;
-            private Font textFont;
             private Color backGroundColor;
             private string textFontName;
+            private bool[] drawListFlag;
+            private int borderLineWidth;
 
             public Settings()
             {
@@ -26,6 +28,10 @@ namespace BitmapFontGenerator
                 this.textMarginSize = (this.TextFontSize / 2);
                 this.textFontName = defaultFontName;
                 this.textFont = new Font(this.textFontName, this.TextFontSize);
+                this.drawListFlag = new bool[ShiftJisStringList.GetAllList().Length];
+                for (int i = 0; i < this.drawListFlag.Length; ++i) this.drawListFlag[i] = true;
+                this.drawListFlag[this.drawListFlag.Length - 1] = false;
+                this.borderLineWidth = 0;
             }
 
             public int TextFontSize
@@ -70,6 +76,15 @@ namespace BitmapFontGenerator
                 get { return this.backGroundColor; }
                 set { this.backGroundColor = value; }
             }
+            public bool[] IsDrawList
+            {
+                get { return this.drawListFlag; }
+            }
+            public int BorderLineWidth
+            {
+                get { return this.borderLineWidth; }
+                set { this.borderLineWidth = value; }
+            }
         };
 
         public Bitmap Generate(Settings settings)
@@ -78,20 +93,31 @@ namespace BitmapFontGenerator
             int[] ylengthList = ShiftJisStringList.GetYLengthList();
 
             int heightLength = 0;
+            int heightListCount = 0;
             for (int j = 0; j < stringList.Length; ++j)
             {
+                if (!settings.IsDrawList[j]) continue;
                 heightLength += ylengthList[j];
+                ++heightListCount;
+            }
+            
+            // 描画範囲が 0 なら最小のビットマップを渡す
+            // null のほうがいいかも
+            if (heightListCount == 0)
+            {
+                return new Bitmap(1, 1);
             }
 
-            bool withBorder = false;
-            int borderLineWidth = withBorder ? 1 : 0; // true にすると区切り線を入れる
+            bool withBorder = (settings.BorderLineWidth != 0); // true にすると区切り線を入れる
+            int borderLineWidth = settings.BorderLineWidth;
+            int borderLineWidthHalf = (borderLineWidth > 1) ? borderLineWidth / 2 : 0;
             bool areaMargin = false; // true にするとリストごとに一行空白を作る
             Size charAreaSize = new Size(
                 (int)System.Math.Ceiling(settings.TextFontSize * 1.5f) + borderLineWidth, 
                 (int)System.Math.Ceiling(settings.TextFontSize * 1.8f) + borderLineWidth
             );
             int bitmapWidth = charAreaSize.Width * 16 + borderLineWidth;
-            int bitmapHeight = charAreaSize.Height * (heightLength + (areaMargin ? 4 : 0)) + borderLineWidth;
+            int bitmapHeight = charAreaSize.Height * (heightLength + (areaMargin ? (heightListCount-1): 0)) + borderLineWidth;
             Bitmap bitmap = new Bitmap(bitmapWidth, bitmapHeight);
 
             Graphics graphics = Graphics.FromImage(bitmap);
@@ -104,6 +130,8 @@ namespace BitmapFontGenerator
                 int pointY = 0;
                 for (int j = 0; j < stringList.Length; ++j)
                 {
+                    if (!settings.IsDrawList[j]) continue;
+
                     int x = 0;
                     for (int i = 0; i < stringList[j].Length; ++i)
                     {
@@ -113,8 +141,8 @@ namespace BitmapFontGenerator
                         graphics.DrawString(
                             stringList[j][i], settings.TextFont,
                             new SolidBrush(settings.TextColor),
-                            (x * charAreaSize.Width) + marginWidth,
-                            pointY + marginHeight, sf
+                            (x * charAreaSize.Width) + marginWidth + borderLineWidthHalf,
+                            pointY + marginHeight + borderLineWidthHalf, sf
                         );
                         if (++x >= 16)
                         {
@@ -130,19 +158,20 @@ namespace BitmapFontGenerator
             {
                 Pen borderLinePen = new Pen(new SolidBrush(Color.Black), borderLineWidth);
                 int borderHeightCount = heightLength + stringList.Length + (areaMargin ? 4 : 0);
+                
                 for (int j = 0; j < borderHeightCount; ++j)
                 {
                     graphics.DrawLine(
                         borderLinePen,
-                        0, (j * charAreaSize.Height),
-                        bitmapWidth, (j * charAreaSize.Height)
+                        0, borderLineWidthHalf + (j * charAreaSize.Height),
+                        bitmapWidth, borderLineWidthHalf + (j * charAreaSize.Height)
                     );
                     for (int i = 0; i < 16 + 1; ++i)
                     {
                         graphics.DrawLine(
                             borderLinePen,
-                            (i * charAreaSize.Width), 0,
-                            (i * charAreaSize.Width), bitmapHeight
+                            borderLineWidthHalf + (i * charAreaSize.Width), 0,
+                            borderLineWidthHalf + (i * charAreaSize.Width), bitmapHeight
                         );
                     }
                 }

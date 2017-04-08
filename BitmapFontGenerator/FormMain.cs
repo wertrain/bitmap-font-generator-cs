@@ -31,6 +31,9 @@ namespace BitmapFontGenerator
             bitmapFontGenerator = new BitmapFontGenerator();
             generatorSettings = new BitmapFontGenerator.Settings();
             generatorSettings.TextFontSize = Decimal.ToInt32(numericUpDownFontSize.Value);
+            CheckBox[] checkboxs = getCheckBoxList();
+            for (int i = 0; i < checkboxs.Length; ++i)
+                checkboxs[i].Checked = generatorSettings.IsDrawList[i];
             generateFontBitmap();
 
             int index = comboBoxInstalledFont.FindStringExact(generatorSettings.TextFont.Name);
@@ -64,6 +67,35 @@ namespace BitmapFontGenerator
         {
             generatorSettings.TextFontSize = Decimal.ToInt32(numericUpDownFontSize.Value);
             generateFontBitmap();
+        }
+
+        private CheckBox[] getCheckBoxList()
+        {
+            return new CheckBox[] {
+                checkBoxDrawHankaku,
+                checkBoxDrawZenkaku,
+                checkBoxDrawPlatformDependent,
+                checkBoxDrawJIS1Kanji,
+                checkBoxDrawJIS2Kanji
+            };
+        }
+
+        private void checkBoxDrawFlag_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox[] checkboxs = getCheckBoxList();
+            for (int i = 0; i < checkboxs.Length; ++i)
+            {
+                if (checkboxs[i] == sender)
+                {
+                    // 画像サイズが変更されるのでスクロール値はリセットする
+                    panelPreview.VerticalScroll.Value = 0;
+                    panelPreview.HorizontalScroll.Value = 0;
+
+                    generatorSettings.IsDrawList[i] = checkboxs[i].Checked;
+                    generateFontBitmap();
+                    return;
+                }
+            }
         }
     }
 }

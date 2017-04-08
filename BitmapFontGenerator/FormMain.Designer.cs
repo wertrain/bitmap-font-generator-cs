@@ -46,12 +46,14 @@
             this.checkBoxDrawHankaku = new System.Windows.Forms.CheckBox();
             this.groupBoxFontSize = new System.Windows.Forms.GroupBox();
             this.numericUpDownFontSize = new System.Windows.Forms.NumericUpDown();
+            this.buttonExportFile = new System.Windows.Forms.Button();
             this.groupBoxFont = new System.Windows.Forms.GroupBox();
             this.comboBoxInstalledFont = new System.Windows.Forms.ComboBox();
             this.textBoxUserFont = new System.Windows.Forms.TextBox();
             this.buttonSelectFont = new System.Windows.Forms.Button();
-            this.openFileDialogSelectFont = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialogSelectFontFile = new System.Windows.Forms.OpenFileDialog();
             this.backgroundWorkerGenerateFontBitmap = new System.ComponentModel.BackgroundWorker();
+            this.saveFileDialogSelectExportFile = new System.Windows.Forms.SaveFileDialog();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             this.panelPreview.SuspendLayout();
@@ -128,6 +130,7 @@
             // 
             this.panelFontSettings.Controls.Add(this.groupBoxCodeArea);
             this.panelFontSettings.Controls.Add(this.groupBoxFontSize);
+            this.panelFontSettings.Controls.Add(this.buttonExportFile);
             this.panelFontSettings.Controls.Add(this.groupBoxFont);
             resources.ApplyResources(this.panelFontSettings, "panelFontSettings");
             this.panelFontSettings.Name = "panelFontSettings";
@@ -201,6 +204,13 @@
             0});
             this.numericUpDownFontSize.ValueChanged += new System.EventHandler(this.numericUpDownFontSize_ValueChanged);
             // 
+            // buttonExportFile
+            // 
+            resources.ApplyResources(this.buttonExportFile, "buttonExportFile");
+            this.buttonExportFile.Name = "buttonExportFile";
+            this.buttonExportFile.UseVisualStyleBackColor = true;
+            this.buttonExportFile.Click += new System.EventHandler(this.buttonExportFile_Click);
+            // 
             // groupBoxFont
             // 
             resources.ApplyResources(this.groupBoxFont, "groupBoxFont");
@@ -230,15 +240,20 @@
             this.buttonSelectFont.UseVisualStyleBackColor = true;
             this.buttonSelectFont.Click += new System.EventHandler(this.buttonSelectFont_Click);
             // 
-            // openFileDialogSelectFont
+            // openFileDialogSelectFontFile
             // 
-            resources.ApplyResources(this.openFileDialogSelectFont, "openFileDialogSelectFont");
-            this.openFileDialogSelectFont.RestoreDirectory = true;
+            resources.ApplyResources(this.openFileDialogSelectFontFile, "openFileDialogSelectFontFile");
+            this.openFileDialogSelectFontFile.RestoreDirectory = true;
             // 
             // backgroundWorkerGenerateFontBitmap
             // 
             this.backgroundWorkerGenerateFontBitmap.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerGenerateFontBitmap_DoWork);
             this.backgroundWorkerGenerateFontBitmap.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerGenerateFontBitmap_RunWorkerCompleted);
+            // 
+            // saveFileDialogSelectExportFile
+            // 
+            this.saveFileDialogSelectExportFile.FileName = "export";
+            resources.ApplyResources(this.saveFileDialogSelectExportFile, "saveFileDialogSelectExportFile");
             // 
             // FormMain
             // 
@@ -285,7 +300,7 @@
         private System.Windows.Forms.ComboBox comboBoxInstalledFont;
         private System.Windows.Forms.TextBox textBoxUserFont;
         private System.Windows.Forms.Button buttonSelectFont;
-        private System.Windows.Forms.OpenFileDialog openFileDialogSelectFont;
+        private System.Windows.Forms.OpenFileDialog openFileDialogSelectFontFile;
         private System.Windows.Forms.GroupBox groupBoxFontSize;
         private System.Windows.Forms.NumericUpDown numericUpDownFontSize;
         private System.Windows.Forms.GroupBox groupBoxCodeArea;
@@ -295,6 +310,8 @@
         private System.Windows.Forms.CheckBox checkBoxDrawJIS2Kanji;
         private System.Windows.Forms.CheckBox checkBoxDrawJIS1Kanji;
         private System.ComponentModel.BackgroundWorker backgroundWorkerGenerateFontBitmap;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogSelectExportFile;
+        private System.Windows.Forms.Button buttonExportFile;
     }
 }
 

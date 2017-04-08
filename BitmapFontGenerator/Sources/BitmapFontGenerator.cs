@@ -156,7 +156,7 @@ namespace BitmapFontGenerator
                     {
                         SizeF drawnSize = graphics.MeasureString(stringList[j][i], settings.TextFont, charAreaSize.Width, sf);
                         int marginWidth = (charAreaSize.Width - (int)drawnSize.Width) / 2;
-                        int marginHeight = (charAreaSize.Height - (int)(drawnSize.Height * 0.95f)) / 2; // 0.95 をかけているのは、MeasureString から大きめの高さが返ってきてしまうので苦肉の策
+                        int marginHeight = (charAreaSize.Height - (int)(drawnSize.Height * 0.95)) / 2; // 0.95 をかけているのは、MeasureString から大きめの高さが返ってきてしまうので苦肉の策
                         graphics.DrawString(
                             stringList[j][i], settings.TextFont,
                             new SolidBrush(settings.TextColor),

@@ -46,7 +46,6 @@ namespace BitmapFontGenerator
             skipGenerateFontBitmap = false;
 
             runGenerateFontBitmap();
-            //fontBitmap.Save("font.png", System.Drawing.Imaging.ImageFormat.Png);
         }
 
         private void runGenerateFontBitmap()
@@ -61,17 +60,18 @@ namespace BitmapFontGenerator
         {
             generatorSettings.TextFontName = comboBoxInstalledFont.SelectedItem.ToString();
             runGenerateFontBitmap();
+            textBoxUserFont.Text = string.Empty;
         }
 
         private void buttonSelectFont_Click(object sender, EventArgs e)
         {
-            if (openFileDialogSelectFont.ShowDialog() == DialogResult.OK)
+            if (openFileDialogSelectFontFile.ShowDialog() == DialogResult.OK)
             {
-                textBoxUserFont.Text = openFileDialogSelectFont.FileName;
+                textBoxUserFont.Text = openFileDialogSelectFontFile.FileName;
 
                 using (var pfc = new System.Drawing.Text.PrivateFontCollection())
                 {
-                    pfc.AddFontFile(openFileDialogSelectFont.FileName);
+                    pfc.AddFontFile(openFileDialogSelectFontFile.FileName);
                     generatorSettings.PrivateFont = pfc.Families[0];
                     runGenerateFontBitmap();
                 }
@@ -86,7 +86,8 @@ namespace BitmapFontGenerator
 
         private CheckBox[] getCheckBoxList()
         {
-            return new CheckBox[] {
+            return new CheckBox[]
+            {
                 checkBoxDrawHankaku,
                 checkBoxDrawZenkaku,
                 checkBoxDrawPlatformDependent,
@@ -98,19 +99,13 @@ namespace BitmapFontGenerator
         private void checkBoxDrawFlag_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox[] checkboxs = getCheckBoxList();
-            for (int i = 0; i < checkboxs.Length; ++i)
-            {
-                if (checkboxs[i] == sender)
-                {
-                    // 画像サイズが変更されるのでスクロール値はリセットする
-                    panelPreview.VerticalScroll.Value = 0;
-                    panelPreview.HorizontalScroll.Value = 0;
+            int index = Array.IndexOf(checkboxs, sender);
+            generatorSettings.IsDrawList[index] = checkboxs[index].Checked;
+            runGenerateFontBitmap();
 
-                    generatorSettings.IsDrawList[i] = checkboxs[i].Checked;
-                    runGenerateFontBitmap();
-                    return;
-                }
-            }
+            // 画像サイズが変更されるのでスクロール値はリセットする
+            panelPreview.VerticalScroll.Value = 0;
+            panelPreview.HorizontalScroll.Value = 0;
         }
 
         private void backgroundWorkerGenerateFontBitmap_DoWork(object sender, DoWorkEventArgs e)
@@ -128,6 +123,22 @@ namespace BitmapFontGenerator
 
             panelPreview.Enabled = true;
             panelFontSettings.Enabled = true;
+        }
+
+        private void buttonExportFile_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialogSelectExportFile.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = saveFileDialogSelectExportFile.FileName;
+                System.Drawing.Imaging.ImageFormat format = System.Drawing.Imaging.ImageFormat.Bmp;
+                switch (System.IO.Path.GetExtension(filePath))
+                {
+                    case "bmp": format = System.Drawing.Imaging.ImageFormat.Bmp; break;
+                    case "png": format = System.Drawing.Imaging.ImageFormat.Png; break;
+                    case "gif": format = System.Drawing.Imaging.ImageFormat.Gif; break;
+                }
+                fontBitmap.Save(filePath, format);
+            }
         }
     }
 }

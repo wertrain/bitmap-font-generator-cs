@@ -51,6 +51,7 @@
             this.textBoxUserFont = new System.Windows.Forms.TextBox();
             this.buttonSelectFont = new System.Windows.Forms.Button();
             this.openFileDialogSelectFont = new System.Windows.Forms.OpenFileDialog();
+            this.backgroundWorkerGenerateFontBitmap = new System.ComponentModel.BackgroundWorker();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             this.panelPreview.SuspendLayout();
@@ -234,6 +235,11 @@
             resources.ApplyResources(this.openFileDialogSelectFont, "openFileDialogSelectFont");
             this.openFileDialogSelectFont.RestoreDirectory = true;
             // 
+            // backgroundWorkerGenerateFontBitmap
+            // 
+            this.backgroundWorkerGenerateFontBitmap.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerGenerateFontBitmap_DoWork);
+            this.backgroundWorkerGenerateFontBitmap.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerGenerateFontBitmap_RunWorkerCompleted);
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -288,6 +294,7 @@
         private System.Windows.Forms.CheckBox checkBoxDrawZenkaku;
         private System.Windows.Forms.CheckBox checkBoxDrawJIS2Kanji;
         private System.Windows.Forms.CheckBox checkBoxDrawJIS1Kanji;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerGenerateFontBitmap;
     }
 }
 

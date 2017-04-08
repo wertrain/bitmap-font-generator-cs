@@ -15,6 +15,7 @@ namespace BitmapFontGenerator
         private BitmapFontGenerator bitmapFontGenerator;
         private BitmapFontGenerator.Settings generatorSettings;
         private Bitmap fontBitmap;
+        private bool skipGenerateFontBitmap;
 
         public FormMain()
         {
@@ -31,28 +32,35 @@ namespace BitmapFontGenerator
             bitmapFontGenerator = new BitmapFontGenerator();
             generatorSettings = new BitmapFontGenerator.Settings();
             generatorSettings.TextFontSize = Decimal.ToInt32(numericUpDownFontSize.Value);
-            CheckBox[] checkboxs = getCheckBoxList();
-            for (int i = 0; i < checkboxs.Length; ++i)
-                checkboxs[i].Checked = generatorSettings.IsDrawList[i];
-            generateFontBitmap();
 
-            int index = comboBoxInstalledFont.FindStringExact(generatorSettings.TextFont.Name);
-            comboBoxInstalledFont.SelectedIndex = index;
+            // UI に初期設定を行うとき、イベントが走ってしまうのでフラグで管理する
+            // もっと良い方法がありそう......
+            skipGenerateFontBitmap = true;
+            {
+                CheckBox[] checkboxs = getCheckBoxList();
+                for (int i = 0; i < checkboxs.Length; ++i)
+                    checkboxs[i].Checked = generatorSettings.IsDrawList[i];
+                int index = comboBoxInstalledFont.FindStringExact(generatorSettings.TextFont.Name);
+                comboBoxInstalledFont.SelectedIndex = index;
+            }
+            skipGenerateFontBitmap = false;
 
+            runGenerateFontBitmap();
             //fontBitmap.Save("font.png", System.Drawing.Imaging.ImageFormat.Png);
         }
 
-        private void generateFontBitmap()
+        private void runGenerateFontBitmap()
         {
-            if (fontBitmap != null) fontBitmap.Dispose();
-            fontBitmap = bitmapFontGenerator.Generate(generatorSettings);
-            pictureBoxPreview.Image = fontBitmap;
+            if (skipGenerateFontBitmap || backgroundWorkerGenerateFontBitmap.IsBusy) return;
+            backgroundWorkerGenerateFontBitmap.RunWorkerAsync();
+            panelPreview.Enabled = false;
+            panelFontSettings.Enabled = false;
         }
 
         private void comboBoxInstalledFont_TextChanged(object sender, EventArgs e)
         {
             generatorSettings.TextFontName = comboBoxInstalledFont.SelectedItem.ToString();
-            generateFontBitmap();
+            runGenerateFontBitmap();
         }
 
         private void buttonSelectFont_Click(object sender, EventArgs e)
@@ -66,7 +74,7 @@ namespace BitmapFontGenerator
         private void numericUpDownFontSize_ValueChanged(object sender, EventArgs e)
         {
             generatorSettings.TextFontSize = Decimal.ToInt32(numericUpDownFontSize.Value);
-            generateFontBitmap();
+            runGenerateFontBitmap();
         }
 
         private CheckBox[] getCheckBoxList()
@@ -92,10 +100,27 @@ namespace BitmapFontGenerator
                     panelPreview.HorizontalScroll.Value = 0;
 
                     generatorSettings.IsDrawList[i] = checkboxs[i].Checked;
-                    generateFontBitmap();
+                    runGenerateFontBitmap();
                     return;
                 }
             }
+        }
+
+        private void backgroundWorkerGenerateFontBitmap_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker backgroundWorker = (BackgroundWorker)sender;
+            Bitmap bitmap = bitmapFontGenerator.Generate(generatorSettings);
+            e.Result = bitmap;
+        }
+
+        private void backgroundWorkerGenerateFontBitmap_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (fontBitmap != null) fontBitmap.Dispose();
+            fontBitmap = (Bitmap)e.Result;
+            pictureBoxPreview.Image = fontBitmap;
+
+            panelPreview.Enabled = true;
+            panelFontSettings.Enabled = true;
         }
     }
 }

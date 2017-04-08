@@ -43,6 +43,8 @@
             this.textBoxUserFont = new System.Windows.Forms.TextBox();
             this.buttonSelectFont = new System.Windows.Forms.Button();
             this.openFileDialogSelectFont = new System.Windows.Forms.OpenFileDialog();
+            this.numericUpDownFontSize = new System.Windows.Forms.NumericUpDown();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             this.panelPreview.SuspendLayout();
@@ -52,6 +54,8 @@
             this.splitContainerMain.SuspendLayout();
             this.panelFontSettings.SuspendLayout();
             this.groupBoxFont.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFontSize)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripMain
@@ -114,6 +118,7 @@
             // 
             // panelFontSettings
             // 
+            this.panelFontSettings.Controls.Add(this.groupBox1);
             this.panelFontSettings.Controls.Add(this.groupBoxFont);
             resources.ApplyResources(this.panelFontSettings, "panelFontSettings");
             this.panelFontSettings.Name = "panelFontSettings";
@@ -152,6 +157,29 @@
             resources.ApplyResources(this.openFileDialogSelectFont, "openFileDialogSelectFont");
             this.openFileDialogSelectFont.RestoreDirectory = true;
             // 
+            // numericUpDownFontSize
+            // 
+            resources.ApplyResources(this.numericUpDownFontSize, "numericUpDownFontSize");
+            this.numericUpDownFontSize.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownFontSize.Name = "numericUpDownFontSize";
+            this.numericUpDownFontSize.Value = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.numericUpDownFontSize.ValueChanged += new System.EventHandler(this.numericUpDownFontSize_ValueChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.numericUpDownFontSize);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -173,6 +201,8 @@
             this.panelFontSettings.ResumeLayout(false);
             this.groupBoxFont.ResumeLayout(false);
             this.groupBoxFont.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFontSize)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,6 +224,8 @@
         private System.Windows.Forms.TextBox textBoxUserFont;
         private System.Windows.Forms.Button buttonSelectFont;
         private System.Windows.Forms.OpenFileDialog openFileDialogSelectFont;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDownFontSize;
     }
 }
 

@@ -29,7 +29,8 @@ namespace BitmapFontGenerator
             }
 
             bitmapFontGenerator = new BitmapFontGenerator();
-            generatorSettings = BitmapFontGenerator.CreateDefaultSettings();
+            generatorSettings = new BitmapFontGenerator.Settings();
+            generatorSettings.TextFontSize = Decimal.ToInt32(numericUpDownFontSize.Value);
             generateFontBitmap();
 
             int index = comboBoxInstalledFont.FindStringExact(generatorSettings.TextFont.Name);
@@ -40,6 +41,7 @@ namespace BitmapFontGenerator
 
         private void generateFontBitmap()
         {
+            if (fontBitmap != null) fontBitmap.Dispose();
             fontBitmap = bitmapFontGenerator.Generate(generatorSettings);
             pictureBoxPreview.Image = fontBitmap;
         }
@@ -56,6 +58,12 @@ namespace BitmapFontGenerator
             {
                 textBoxUserFont.Text = openFileDialogSelectFont.FileName;
             }
+        }
+
+        private void numericUpDownFontSize_ValueChanged(object sender, EventArgs e)
+        {
+            generatorSettings.TextFontSize = Decimal.ToInt32(numericUpDownFontSize.Value);
+            generateFontBitmap();
         }
     }
 }

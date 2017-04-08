@@ -68,6 +68,13 @@ namespace BitmapFontGenerator
             if (openFileDialogSelectFont.ShowDialog() == DialogResult.OK)
             {
                 textBoxUserFont.Text = openFileDialogSelectFont.FileName;
+
+                using (var pfc = new System.Drawing.Text.PrivateFontCollection())
+                {
+                    pfc.AddFontFile(openFileDialogSelectFont.FileName);
+                    generatorSettings.PrivateFont = pfc.Families[0];
+                    runGenerateFontBitmap();
+                }
             }
         }
 

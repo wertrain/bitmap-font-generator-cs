@@ -134,12 +134,12 @@
             // 
             // groupBoxCodeArea
             // 
+            resources.ApplyResources(this.groupBoxCodeArea, "groupBoxCodeArea");
             this.groupBoxCodeArea.Controls.Add(this.checkBoxDrawJIS2Kanji);
             this.groupBoxCodeArea.Controls.Add(this.checkBoxDrawJIS1Kanji);
             this.groupBoxCodeArea.Controls.Add(this.checkBoxDrawPlatformDependent);
             this.groupBoxCodeArea.Controls.Add(this.checkBoxDrawZenkaku);
             this.groupBoxCodeArea.Controls.Add(this.checkBoxDrawHankaku);
-            resources.ApplyResources(this.groupBoxCodeArea, "groupBoxCodeArea");
             this.groupBoxCodeArea.Name = "groupBoxCodeArea";
             this.groupBoxCodeArea.TabStop = false;
             // 
@@ -180,8 +180,8 @@
             // 
             // groupBoxFontSize
             // 
-            this.groupBoxFontSize.Controls.Add(this.numericUpDownFontSize);
             resources.ApplyResources(this.groupBoxFontSize, "groupBoxFontSize");
+            this.groupBoxFontSize.Controls.Add(this.numericUpDownFontSize);
             this.groupBoxFontSize.Name = "groupBoxFontSize";
             this.groupBoxFontSize.TabStop = false;
             // 
@@ -203,18 +203,18 @@
             // 
             // groupBoxFont
             // 
+            resources.ApplyResources(this.groupBoxFont, "groupBoxFont");
             this.groupBoxFont.Controls.Add(this.comboBoxInstalledFont);
             this.groupBoxFont.Controls.Add(this.textBoxUserFont);
             this.groupBoxFont.Controls.Add(this.buttonSelectFont);
-            resources.ApplyResources(this.groupBoxFont, "groupBoxFont");
             this.groupBoxFont.Name = "groupBoxFont";
             this.groupBoxFont.TabStop = false;
             // 
             // comboBoxInstalledFont
             // 
+            resources.ApplyResources(this.comboBoxInstalledFont, "comboBoxInstalledFont");
             this.comboBoxInstalledFont.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxInstalledFont.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxInstalledFont, "comboBoxInstalledFont");
             this.comboBoxInstalledFont.Name = "comboBoxInstalledFont";
             this.comboBoxInstalledFont.TextChanged += new System.EventHandler(this.comboBoxInstalledFont_TextChanged);
             // 

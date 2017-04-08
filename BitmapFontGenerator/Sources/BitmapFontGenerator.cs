@@ -12,6 +12,7 @@ namespace BitmapFontGenerator
         public class Settings
         {
             private Font textFont;
+            private FontFamily fontFamily;
             private int textFontSize;
             private int textMarginSize;
             private Color textColor;
@@ -28,6 +29,7 @@ namespace BitmapFontGenerator
                 this.textMarginSize = (this.TextFontSize / 2);
                 this.textFontName = defaultFontName;
                 this.textFont = new Font(this.textFontName, this.TextFontSize);
+                this.fontFamily = null;
                 this.drawListFlag = new bool[ShiftJisStringList.GetAllList().Length];
                 for (int i = 0; i < this.drawListFlag.Length; ++i) this.drawListFlag[i] = true;
                 this.drawListFlag[this.drawListFlag.Length - 1] = false;
@@ -42,7 +44,8 @@ namespace BitmapFontGenerator
                     this.textFontSize = value;
                     this.textMarginSize = value / 2;
                     this.textFont.Dispose();
-                    this.textFont = new Font(this.textFontName, this.textFontSize);
+                    if (this.fontFamily != null) this.textFont = new Font(this.fontFamily, this.textFontSize);
+                    else if (this.textFontName.Length != 0) this.textFont = new Font(this.textFontName, this.textFontSize);
                 }
             }
             public int TextMarginSize
@@ -65,6 +68,11 @@ namespace BitmapFontGenerator
                     this.textFontName = value;
                     this.textFont.Dispose();
                     this.textFont = new Font(this.textFontName, this.TextFontSize);
+                    if (this.fontFamily != null)
+                    {
+                        this.fontFamily.Dispose();
+                        this.fontFamily = null;
+                    }
                 }
             }
             public Font TextFont
@@ -84,6 +92,17 @@ namespace BitmapFontGenerator
             {
                 get { return this.borderLineWidth; }
                 set { this.borderLineWidth = value; }
+            }
+            public FontFamily PrivateFont
+            {
+                set
+                {
+                    if (this.fontFamily != null)
+                        this.fontFamily.Dispose();
+                    this.fontFamily = value;
+                    this.textFont = new Font(this.fontFamily, this.TextFontSize);
+                    this.textFontName = string.Empty;
+                }
             }
         };
 

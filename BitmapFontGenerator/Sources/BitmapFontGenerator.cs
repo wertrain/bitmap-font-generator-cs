@@ -85,7 +85,7 @@ namespace BitmapFontGenerator
 
             bool withBorder = false;
             int borderLineWidth = withBorder ? 1 : 0; // true にすると区切り線を入れる
-            bool areaMargin = true; // true にするとリストごとに一行空白を作る
+            bool areaMargin = false; // true にするとリストごとに一行空白を作る
             Size charAreaSize = new Size(
                 (int)System.Math.Ceiling(settings.TextFontSize * 1.5f) + borderLineWidth, 
                 (int)System.Math.Ceiling(settings.TextFontSize * 1.8f) + borderLineWidth

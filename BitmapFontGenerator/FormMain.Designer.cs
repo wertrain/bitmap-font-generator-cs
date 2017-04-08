@@ -31,10 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.fileFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exportEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
-            this.pictureBoxPreview = new System.Windows.Forms.PictureBox();
             this.panelPreview = new System.Windows.Forms.Panel();
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.panelFontSettings = new System.Windows.Forms.Panel();
@@ -46,7 +44,6 @@
             this.checkBoxDrawHankaku = new System.Windows.Forms.CheckBox();
             this.groupBoxFontSize = new System.Windows.Forms.GroupBox();
             this.numericUpDownFontSize = new System.Windows.Forms.NumericUpDown();
-            this.buttonExportFile = new System.Windows.Forms.Button();
             this.groupBoxFont = new System.Windows.Forms.GroupBox();
             this.comboBoxInstalledFont = new System.Windows.Forms.ComboBox();
             this.textBoxUserFont = new System.Windows.Forms.TextBox();
@@ -54,8 +51,10 @@
             this.openFileDialogSelectFontFile = new System.Windows.Forms.OpenFileDialog();
             this.backgroundWorkerGenerateFontBitmap = new System.ComponentModel.BackgroundWorker();
             this.saveFileDialogSelectExportFile = new System.Windows.Forms.SaveFileDialog();
+            this.pictureBoxPreview = new System.Windows.Forms.PictureBox();
+            this.buttonExportFile = new System.Windows.Forms.Button();
+            this.toolStripMenuItemExportFile = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             this.panelPreview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
@@ -66,6 +65,7 @@
             this.groupBoxFontSize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFontSize)).BeginInit();
             this.groupBoxFont.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripMain
@@ -79,14 +79,9 @@
             // fileFToolStripMenuItem
             // 
             this.fileFToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exportEToolStripMenuItem});
+            this.toolStripMenuItemExportFile});
             this.fileFToolStripMenuItem.Name = "fileFToolStripMenuItem";
             resources.ApplyResources(this.fileFToolStripMenuItem, "fileFToolStripMenuItem");
-            // 
-            // exportEToolStripMenuItem
-            // 
-            this.exportEToolStripMenuItem.Name = "exportEToolStripMenuItem";
-            resources.ApplyResources(this.exportEToolStripMenuItem, "exportEToolStripMenuItem");
             // 
             // helpHToolStripMenuItem
             // 
@@ -97,13 +92,6 @@
             // 
             resources.ApplyResources(this.statusStripMain, "statusStripMain");
             this.statusStripMain.Name = "statusStripMain";
-            // 
-            // pictureBoxPreview
-            // 
-            this.pictureBoxPreview.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.pictureBoxPreview, "pictureBoxPreview");
-            this.pictureBoxPreview.Name = "pictureBoxPreview";
-            this.pictureBoxPreview.TabStop = false;
             // 
             // panelPreview
             // 
@@ -204,13 +192,6 @@
             0});
             this.numericUpDownFontSize.ValueChanged += new System.EventHandler(this.numericUpDownFontSize_ValueChanged);
             // 
-            // buttonExportFile
-            // 
-            resources.ApplyResources(this.buttonExportFile, "buttonExportFile");
-            this.buttonExportFile.Name = "buttonExportFile";
-            this.buttonExportFile.UseVisualStyleBackColor = true;
-            this.buttonExportFile.Click += new System.EventHandler(this.buttonExportFile_Click);
-            // 
             // groupBoxFont
             // 
             resources.ApplyResources(this.groupBoxFont, "groupBoxFont");
@@ -255,6 +236,28 @@
             this.saveFileDialogSelectExportFile.FileName = "export";
             resources.ApplyResources(this.saveFileDialogSelectExportFile, "saveFileDialogSelectExportFile");
             // 
+            // pictureBoxPreview
+            // 
+            this.pictureBoxPreview.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.pictureBoxPreview, "pictureBoxPreview");
+            this.pictureBoxPreview.Name = "pictureBoxPreview";
+            this.pictureBoxPreview.TabStop = false;
+            // 
+            // buttonExportFile
+            // 
+            resources.ApplyResources(this.buttonExportFile, "buttonExportFile");
+            this.buttonExportFile.Image = global::BitmapFontGenerator.Properties.Resources.imagelist;
+            this.buttonExportFile.Name = "buttonExportFile";
+            this.buttonExportFile.UseVisualStyleBackColor = true;
+            this.buttonExportFile.Click += new System.EventHandler(this.buttonExportFile_Click);
+            // 
+            // toolStripMenuItemExportFile
+            // 
+            this.toolStripMenuItemExportFile.Image = global::BitmapFontGenerator.Properties.Resources.imagelist;
+            this.toolStripMenuItemExportFile.Name = "toolStripMenuItemExportFile";
+            resources.ApplyResources(this.toolStripMenuItemExportFile, "toolStripMenuItemExportFile");
+            this.toolStripMenuItemExportFile.Click += new System.EventHandler(this.toolStripMenuItemExportFile_Click);
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -266,7 +269,6 @@
             this.Name = "FormMain";
             this.menuStripMain.ResumeLayout(false);
             this.menuStripMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).EndInit();
             this.panelPreview.ResumeLayout(false);
             this.panelPreview.PerformLayout();
             this.splitContainerMain.Panel1.ResumeLayout(false);
@@ -280,6 +282,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFontSize)).EndInit();
             this.groupBoxFont.ResumeLayout(false);
             this.groupBoxFont.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,7 +296,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpHToolStripMenuItem;
         private System.Windows.Forms.Panel panelPreview;
-        private System.Windows.Forms.ToolStripMenuItem exportEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExportFile;
         private System.Windows.Forms.SplitContainer splitContainerMain;
         private System.Windows.Forms.Panel panelFontSettings;
         private System.Windows.Forms.GroupBox groupBoxFont;

@@ -125,7 +125,7 @@ namespace BitmapFontGenerator
             panelFontSettings.Enabled = true;
         }
 
-        private void buttonExportFile_Click(object sender, EventArgs e)
+        private void exportFile()
         {
             if (saveFileDialogSelectExportFile.ShowDialog() == DialogResult.OK)
             {
@@ -139,6 +139,16 @@ namespace BitmapFontGenerator
                 }
                 fontBitmap.Save(filePath, format);
             }
+        }
+
+        private void buttonExportFile_Click(object sender, EventArgs e)
+        {
+            exportFile();
+        }
+
+        private void toolStripMenuItemExportFile_Click(object sender, EventArgs e)
+        {
+            exportFile();
         }
     }
 }

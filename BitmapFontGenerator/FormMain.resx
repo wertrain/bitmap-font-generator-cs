@@ -274,7 +274,7 @@
     <value>178, 16</value>
   </data>
   <data name="checkBoxDrawJIS2Kanji.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>14</value>
   </data>
   <data name="checkBoxDrawJIS2Kanji.Text" xml:space="preserve">
     <value>JIS-2 Kanji (0x9890-0xEAAF)</value>
@@ -301,7 +301,7 @@
     <value>173, 16</value>
   </data>
   <data name="checkBoxDrawJIS1Kanji.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>13</value>
   </data>
   <data name="checkBoxDrawJIS1Kanji.Text" xml:space="preserve">
     <value>JIS-1 Kanji (0x8890-0x987F)</value>
@@ -328,7 +328,7 @@
     <value>216, 16</value>
   </data>
   <data name="checkBoxDrawPlatformDependent.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>12</value>
   </data>
   <data name="checkBoxDrawPlatformDependent.Text" xml:space="preserve">
     <value>Platform Dependent (0x8740-0x879F)</value>
@@ -355,7 +355,7 @@
     <value>160, 16</value>
   </data>
   <data name="checkBoxDrawZenkaku.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>11</value>
   </data>
   <data name="checkBoxDrawZenkaku.Text" xml:space="preserve">
     <value>Zenkaku (0x8140-0x84BF)</value>
@@ -382,7 +382,7 @@
     <value>137, 16</value>
   </data>
   <data name="checkBoxDrawHankaku.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>10</value>
   </data>
   <data name="checkBoxDrawHankaku.Text" xml:space="preserve">
     <value>Hankaku (0x20-0xDF)</value>
@@ -423,6 +423,15 @@
   <data name="&gt;&gt;groupBoxCodeArea.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="numericUpDownFontSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 20</value>
+  </data>
+  <data name="numericUpDownFontSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 19</value>
+  </data>
+  <data name="numericUpDownFontSize.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;numericUpDownFontSize.Name" xml:space="preserve">
     <value>numericUpDownFontSize</value>
   </data>
@@ -459,6 +468,18 @@
   <data name="&gt;&gt;groupBoxFontSize.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="comboBoxInstalledFont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 21</value>
+  </data>
+  <data name="comboBoxInstalledFont.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="comboBoxInstalledFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 20</value>
+  </data>
+  <data name="comboBoxInstalledFont.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;comboBoxInstalledFont.Name" xml:space="preserve">
     <value>comboBoxInstalledFont</value>
   </data>
@@ -471,6 +492,15 @@
   <data name="&gt;&gt;comboBoxInstalledFont.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="textBoxUserFont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 51</value>
+  </data>
+  <data name="textBoxUserFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 19</value>
+  </data>
+  <data name="textBoxUserFont.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;textBoxUserFont.Name" xml:space="preserve">
     <value>textBoxUserFont</value>
   </data>
@@ -482,6 +512,18 @@
   </data>
   <data name="&gt;&gt;textBoxUserFont.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="buttonSelectFont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>176, 49</value>
+  </data>
+  <data name="buttonSelectFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 23</value>
+  </data>
+  <data name="buttonSelectFont.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonSelectFont.Text" xml:space="preserve">
+    <value>Select(&amp;S)</value>
   </data>
   <data name="&gt;&gt;buttonSelectFont.Name" xml:space="preserve">
     <value>buttonSelectFont</value>
@@ -575,96 +617,6 @@
   </data>
   <data name="&gt;&gt;splitContainerMain.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="numericUpDownFontSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 20</value>
-  </data>
-  <data name="numericUpDownFontSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 19</value>
-  </data>
-  <data name="numericUpDownFontSize.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownFontSize.Name" xml:space="preserve">
-    <value>numericUpDownFontSize</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownFontSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownFontSize.Parent" xml:space="preserve">
-    <value>groupBoxFontSize</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownFontSize.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="comboBoxInstalledFont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 21</value>
-  </data>
-  <data name="comboBoxInstalledFont.MaxDropDownItems" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="comboBoxInstalledFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 20</value>
-  </data>
-  <data name="comboBoxInstalledFont.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;comboBoxInstalledFont.Name" xml:space="preserve">
-    <value>comboBoxInstalledFont</value>
-  </data>
-  <data name="&gt;&gt;comboBoxInstalledFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBoxInstalledFont.Parent" xml:space="preserve">
-    <value>groupBoxFont</value>
-  </data>
-  <data name="&gt;&gt;comboBoxInstalledFont.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="textBoxUserFont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 51</value>
-  </data>
-  <data name="textBoxUserFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 19</value>
-  </data>
-  <data name="textBoxUserFont.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;textBoxUserFont.Name" xml:space="preserve">
-    <value>textBoxUserFont</value>
-  </data>
-  <data name="&gt;&gt;textBoxUserFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxUserFont.Parent" xml:space="preserve">
-    <value>groupBoxFont</value>
-  </data>
-  <data name="&gt;&gt;textBoxUserFont.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="buttonSelectFont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 49</value>
-  </data>
-  <data name="buttonSelectFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 23</value>
-  </data>
-  <data name="buttonSelectFont.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="buttonSelectFont.Text" xml:space="preserve">
-    <value>Select(&amp;S)</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectFont.Name" xml:space="preserve">
-    <value>buttonSelectFont</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectFont.Parent" xml:space="preserve">
-    <value>groupBoxFont</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectFont.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <metadata name="openFileDialogSelectFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>268, 17</value>

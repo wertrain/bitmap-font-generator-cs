@@ -122,7 +122,7 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="toolStripMenuItemExportFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>122, 22</value>
   </data>
   <data name="toolStripMenuItemExportFile.Text" xml:space="preserve">
     <value>Export(&amp;E)</value>
@@ -262,6 +262,153 @@
     <value>splitContainerMain</value>
   </data>
   <data name="&gt;&gt;splitContainerMain.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBoxOption.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="checkBoxEnableBackgroundTransparent.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxEnableBackgroundTransparent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 56</value>
+  </data>
+  <data name="checkBoxEnableBackgroundTransparent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 16</value>
+  </data>
+  <data name="checkBoxEnableBackgroundTransparent.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="checkBoxEnableBackgroundTransparent.Text" xml:space="preserve">
+    <value>Transparent</value>
+  </data>
+  <data name="&gt;&gt;checkBoxEnableBackgroundTransparent.Name" xml:space="preserve">
+    <value>checkBoxEnableBackgroundTransparent</value>
+  </data>
+  <data name="&gt;&gt;checkBoxEnableBackgroundTransparent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxEnableBackgroundTransparent.Parent" xml:space="preserve">
+    <value>groupBoxOption</value>
+  </data>
+  <data name="&gt;&gt;checkBoxEnableBackgroundTransparent.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictureBoxBackgroundColorPreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBoxBackgroundColorPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 52</value>
+  </data>
+  <data name="pictureBoxBackgroundColorPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="pictureBoxBackgroundColorPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxBackgroundColorPreview.Name" xml:space="preserve">
+    <value>pictureBoxBackgroundColorPreview</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxBackgroundColorPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxBackgroundColorPreview.Parent" xml:space="preserve">
+    <value>groupBoxOption</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxBackgroundColorPreview.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pictureBoxTextColorPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 22</value>
+  </data>
+  <data name="pictureBoxTextColorPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="pictureBoxTextColorPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxTextColorPreview.Name" xml:space="preserve">
+    <value>pictureBoxTextColorPreview</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxTextColorPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxTextColorPreview.Parent" xml:space="preserve">
+    <value>groupBoxOption</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxTextColorPreview.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonSelectTextColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 22</value>
+  </data>
+  <data name="buttonSelectTextColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 23</value>
+  </data>
+  <data name="buttonSelectTextColor.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonSelectTextColor.Text" xml:space="preserve">
+    <value>Text Color</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectTextColor.Name" xml:space="preserve">
+    <value>buttonSelectTextColor</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectTextColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectTextColor.Parent" xml:space="preserve">
+    <value>groupBoxOption</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectTextColor.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonSelectBackgroundColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 52</value>
+  </data>
+  <data name="buttonSelectBackgroundColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 23</value>
+  </data>
+  <data name="buttonSelectBackgroundColor.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="buttonSelectBackgroundColor.Text" xml:space="preserve">
+    <value>Background Color</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectBackgroundColor.Name" xml:space="preserve">
+    <value>buttonSelectBackgroundColor</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectBackgroundColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectBackgroundColor.Parent" xml:space="preserve">
+    <value>groupBoxOption</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectBackgroundColor.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBoxOption.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 338</value>
+  </data>
+  <data name="groupBoxOption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 113</value>
+  </data>
+  <data name="groupBoxOption.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="groupBoxOption.Text" xml:space="preserve">
+    <value>Option</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOption.Name" xml:space="preserve">
+    <value>groupBoxOption</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOption.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOption.Parent" xml:space="preserve">
+    <value>panelFontSettings</value>
+  </data>
+  <data name="&gt;&gt;groupBoxOption.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="groupBoxCodeArea.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -439,7 +586,7 @@
     <value>panelFontSettings</value>
   </data>
   <data name="&gt;&gt;groupBoxCodeArea.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="groupBoxFontSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -490,7 +637,7 @@
     <value>panelFontSettings</value>
   </data>
   <data name="&gt;&gt;groupBoxFontSize.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="buttonExportFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
@@ -526,7 +673,7 @@
     <value>panelFontSettings</value>
   </data>
   <data name="&gt;&gt;buttonExportFile.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="groupBoxFont.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -634,7 +781,7 @@
     <value>panelFontSettings</value>
   </data>
   <data name="&gt;&gt;groupBoxFont.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="panelFontSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -2530,9 +2677,6 @@
         AQAAySEAAOZjAADgfwAA4H8AAP//AAD//wAA
 </value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>800, 600</value>
   </data>
@@ -2543,6 +2687,12 @@
     <value>fileFToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;fileFToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItemExportFile.Name" xml:space="preserve">
+    <value>toolStripMenuItemExportFile</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItemExportFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;helpHToolStripMenuItem.Name" xml:space="preserve">
@@ -2568,12 +2718,6 @@
   </data>
   <data name="&gt;&gt;saveFileDialogSelectExportFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemExportFile.Name" xml:space="preserve">
-    <value>toolStripMenuItemExportFile</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemExportFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMain</value>

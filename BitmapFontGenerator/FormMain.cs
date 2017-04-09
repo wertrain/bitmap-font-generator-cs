@@ -42,6 +42,8 @@ namespace BitmapFontGenerator
                     checkboxs[i].Checked = generatorSettings.IsDrawList[i];
                 int index = comboBoxInstalledFont.FindStringExact(generatorSettings.TextFont.Name);
                 comboBoxInstalledFont.SelectedIndex = index;
+                pictureBoxTextColorPreview.BackColor = generatorSettings.TextColor;
+                pictureBoxBackgroundColorPreview.BackColor = generatorSettings.BackGroundColor;
             }
             skipGenerateFontBitmap = false;
 
@@ -137,7 +139,14 @@ namespace BitmapFontGenerator
                     case "png": format = System.Drawing.Imaging.ImageFormat.Png; break;
                     case "gif": format = System.Drawing.Imaging.ImageFormat.Gif; break;
                 }
-                fontBitmap.Save(filePath, format);
+                Bitmap exportBitmap = fontBitmap.Clone(
+                    new Rectangle(0, 0, fontBitmap.Width, fontBitmap.Height), 
+                    System.Drawing.Imaging.PixelFormat.Format32bppArgb
+                );
+                if (checkBoxEnableBackgroundTransparent.Checked)
+                    exportBitmap.MakeTransparent(generatorSettings.BackGroundColor);
+                exportBitmap.Save(filePath, format);
+                exportBitmap.Dispose();
             }
         }
 
@@ -149,6 +158,39 @@ namespace BitmapFontGenerator
         private void toolStripMenuItemExportFile_Click(object sender, EventArgs e)
         {
             exportFile();
+        }
+
+        private void buttonSelectTextColor_Click(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+            cd.Color = generatorSettings.TextColor;
+            if (cd.ShowDialog() == DialogResult.OK)
+            {
+                generatorSettings.TextColor = cd.Color;
+                pictureBoxTextColorPreview.BackColor = cd.Color;
+                runGenerateFontBitmap();
+            }
+        }
+
+        private void buttonSelectBackgroundColor_Click(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+            cd.Color = generatorSettings.BackGroundColor;
+            if (cd.ShowDialog() == DialogResult.OK)
+            {
+                generatorSettings.BackGroundColor = cd.Color;
+                pictureBoxBackgroundColorPreview.BackColor = cd.Color;
+                runGenerateFontBitmap();
+            }
+        }
+
+        private void checkBoxEnableBackgroundTransparent_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkbox = (CheckBox)sender;
+            pictureBoxBackgroundColorPreview.Enabled = !checkbox.Checked;
+            buttonSelectBackgroundColor.Enabled = !checkbox.Checked;
+            generatorSettings.BackGroundColor = checkbox.Checked ? Color.Transparent : pictureBoxBackgroundColorPreview.BackColor;
+            runGenerateFontBitmap();
         }
     }
 }

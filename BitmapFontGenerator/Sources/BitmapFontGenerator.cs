@@ -137,7 +137,7 @@ namespace BitmapFontGenerator
             );
             int bitmapWidth = charAreaSize.Width * 16 + borderLineWidth;
             int bitmapHeight = charAreaSize.Height * (heightLength + (areaMargin ? (heightListCount-1): 0)) + borderLineWidth;
-            Bitmap bitmap = new Bitmap(bitmapWidth, bitmapHeight);
+            Bitmap bitmap = new Bitmap(bitmapWidth, bitmapHeight, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
 
             Graphics graphics = Graphics.FromImage(bitmap);
             //graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;

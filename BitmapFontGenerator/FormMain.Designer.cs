@@ -31,9 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.fileFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemExportFile = new System.Windows.Forms.ToolStripMenuItem();
             this.helpHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
             this.panelPreview = new System.Windows.Forms.Panel();
+            this.pictureBoxPreview = new System.Windows.Forms.PictureBox();
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.panelFontSettings = new System.Windows.Forms.Panel();
             this.groupBoxCodeArea = new System.Windows.Forms.GroupBox();
@@ -44,6 +46,7 @@
             this.checkBoxDrawHankaku = new System.Windows.Forms.CheckBox();
             this.groupBoxFontSize = new System.Windows.Forms.GroupBox();
             this.numericUpDownFontSize = new System.Windows.Forms.NumericUpDown();
+            this.buttonExportFile = new System.Windows.Forms.Button();
             this.groupBoxFont = new System.Windows.Forms.GroupBox();
             this.comboBoxInstalledFont = new System.Windows.Forms.ComboBox();
             this.textBoxUserFont = new System.Windows.Forms.TextBox();
@@ -51,11 +54,15 @@
             this.openFileDialogSelectFontFile = new System.Windows.Forms.OpenFileDialog();
             this.backgroundWorkerGenerateFontBitmap = new System.ComponentModel.BackgroundWorker();
             this.saveFileDialogSelectExportFile = new System.Windows.Forms.SaveFileDialog();
-            this.pictureBoxPreview = new System.Windows.Forms.PictureBox();
-            this.buttonExportFile = new System.Windows.Forms.Button();
-            this.toolStripMenuItemExportFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBoxOption = new System.Windows.Forms.GroupBox();
+            this.buttonSelectBackgroundColor = new System.Windows.Forms.Button();
+            this.buttonSelectTextColor = new System.Windows.Forms.Button();
+            this.pictureBoxTextColorPreview = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBackgroundColorPreview = new System.Windows.Forms.PictureBox();
+            this.checkBoxEnableBackgroundTransparent = new System.Windows.Forms.CheckBox();
             this.menuStripMain.SuspendLayout();
             this.panelPreview.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
@@ -65,7 +72,9 @@
             this.groupBoxFontSize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFontSize)).BeginInit();
             this.groupBoxFont.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
+            this.groupBoxOption.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripMain
@@ -83,6 +92,13 @@
             this.fileFToolStripMenuItem.Name = "fileFToolStripMenuItem";
             resources.ApplyResources(this.fileFToolStripMenuItem, "fileFToolStripMenuItem");
             // 
+            // toolStripMenuItemExportFile
+            // 
+            this.toolStripMenuItemExportFile.Image = global::BitmapFontGenerator.Properties.Resources.imagelist;
+            this.toolStripMenuItemExportFile.Name = "toolStripMenuItemExportFile";
+            resources.ApplyResources(this.toolStripMenuItemExportFile, "toolStripMenuItemExportFile");
+            this.toolStripMenuItemExportFile.Click += new System.EventHandler(this.toolStripMenuItemExportFile_Click);
+            // 
             // helpHToolStripMenuItem
             // 
             this.helpHToolStripMenuItem.Name = "helpHToolStripMenuItem";
@@ -98,6 +114,13 @@
             resources.ApplyResources(this.panelPreview, "panelPreview");
             this.panelPreview.Controls.Add(this.pictureBoxPreview);
             this.panelPreview.Name = "panelPreview";
+            // 
+            // pictureBoxPreview
+            // 
+            this.pictureBoxPreview.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.pictureBoxPreview, "pictureBoxPreview");
+            this.pictureBoxPreview.Name = "pictureBoxPreview";
+            this.pictureBoxPreview.TabStop = false;
             // 
             // splitContainerMain
             // 
@@ -116,6 +139,7 @@
             // 
             // panelFontSettings
             // 
+            this.panelFontSettings.Controls.Add(this.groupBoxOption);
             this.panelFontSettings.Controls.Add(this.groupBoxCodeArea);
             this.panelFontSettings.Controls.Add(this.groupBoxFontSize);
             this.panelFontSettings.Controls.Add(this.buttonExportFile);
@@ -192,6 +216,14 @@
             0});
             this.numericUpDownFontSize.ValueChanged += new System.EventHandler(this.numericUpDownFontSize_ValueChanged);
             // 
+            // buttonExportFile
+            // 
+            resources.ApplyResources(this.buttonExportFile, "buttonExportFile");
+            this.buttonExportFile.Image = global::BitmapFontGenerator.Properties.Resources.imagelist;
+            this.buttonExportFile.Name = "buttonExportFile";
+            this.buttonExportFile.UseVisualStyleBackColor = true;
+            this.buttonExportFile.Click += new System.EventHandler(this.buttonExportFile_Click);
+            // 
             // groupBoxFont
             // 
             resources.ApplyResources(this.groupBoxFont, "groupBoxFont");
@@ -236,27 +268,51 @@
             this.saveFileDialogSelectExportFile.FileName = "export";
             resources.ApplyResources(this.saveFileDialogSelectExportFile, "saveFileDialogSelectExportFile");
             // 
-            // pictureBoxPreview
+            // groupBoxOption
             // 
-            this.pictureBoxPreview.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.pictureBoxPreview, "pictureBoxPreview");
-            this.pictureBoxPreview.Name = "pictureBoxPreview";
-            this.pictureBoxPreview.TabStop = false;
+            resources.ApplyResources(this.groupBoxOption, "groupBoxOption");
+            this.groupBoxOption.Controls.Add(this.checkBoxEnableBackgroundTransparent);
+            this.groupBoxOption.Controls.Add(this.pictureBoxBackgroundColorPreview);
+            this.groupBoxOption.Controls.Add(this.pictureBoxTextColorPreview);
+            this.groupBoxOption.Controls.Add(this.buttonSelectTextColor);
+            this.groupBoxOption.Controls.Add(this.buttonSelectBackgroundColor);
+            this.groupBoxOption.Name = "groupBoxOption";
+            this.groupBoxOption.TabStop = false;
             // 
-            // buttonExportFile
+            // buttonSelectBackgroundColor
             // 
-            resources.ApplyResources(this.buttonExportFile, "buttonExportFile");
-            this.buttonExportFile.Image = global::BitmapFontGenerator.Properties.Resources.imagelist;
-            this.buttonExportFile.Name = "buttonExportFile";
-            this.buttonExportFile.UseVisualStyleBackColor = true;
-            this.buttonExportFile.Click += new System.EventHandler(this.buttonExportFile_Click);
+            resources.ApplyResources(this.buttonSelectBackgroundColor, "buttonSelectBackgroundColor");
+            this.buttonSelectBackgroundColor.Name = "buttonSelectBackgroundColor";
+            this.buttonSelectBackgroundColor.UseVisualStyleBackColor = true;
+            this.buttonSelectBackgroundColor.Click += new System.EventHandler(this.buttonSelectBackgroundColor_Click);
             // 
-            // toolStripMenuItemExportFile
+            // buttonSelectTextColor
             // 
-            this.toolStripMenuItemExportFile.Image = global::BitmapFontGenerator.Properties.Resources.imagelist;
-            this.toolStripMenuItemExportFile.Name = "toolStripMenuItemExportFile";
-            resources.ApplyResources(this.toolStripMenuItemExportFile, "toolStripMenuItemExportFile");
-            this.toolStripMenuItemExportFile.Click += new System.EventHandler(this.toolStripMenuItemExportFile_Click);
+            resources.ApplyResources(this.buttonSelectTextColor, "buttonSelectTextColor");
+            this.buttonSelectTextColor.Name = "buttonSelectTextColor";
+            this.buttonSelectTextColor.UseVisualStyleBackColor = true;
+            this.buttonSelectTextColor.Click += new System.EventHandler(this.buttonSelectTextColor_Click);
+            // 
+            // pictureBoxTextColorPreview
+            // 
+            this.pictureBoxTextColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxTextColorPreview, "pictureBoxTextColorPreview");
+            this.pictureBoxTextColorPreview.Name = "pictureBoxTextColorPreview";
+            this.pictureBoxTextColorPreview.TabStop = false;
+            // 
+            // pictureBoxBackgroundColorPreview
+            // 
+            this.pictureBoxBackgroundColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxBackgroundColorPreview, "pictureBoxBackgroundColorPreview");
+            this.pictureBoxBackgroundColorPreview.Name = "pictureBoxBackgroundColorPreview";
+            this.pictureBoxBackgroundColorPreview.TabStop = false;
+            // 
+            // checkBoxEnableBackgroundTransparent
+            // 
+            resources.ApplyResources(this.checkBoxEnableBackgroundTransparent, "checkBoxEnableBackgroundTransparent");
+            this.checkBoxEnableBackgroundTransparent.Name = "checkBoxEnableBackgroundTransparent";
+            this.checkBoxEnableBackgroundTransparent.UseVisualStyleBackColor = true;
+            this.checkBoxEnableBackgroundTransparent.CheckedChanged += new System.EventHandler(this.checkBoxEnableBackgroundTransparent_CheckedChanged);
             // 
             // FormMain
             // 
@@ -271,6 +327,7 @@
             this.menuStripMain.PerformLayout();
             this.panelPreview.ResumeLayout(false);
             this.panelPreview.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).EndInit();
             this.splitContainerMain.Panel1.ResumeLayout(false);
             this.splitContainerMain.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).EndInit();
@@ -282,7 +339,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFontSize)).EndInit();
             this.groupBoxFont.ResumeLayout(false);
             this.groupBoxFont.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).EndInit();
+            this.groupBoxOption.ResumeLayout(false);
+            this.groupBoxOption.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,6 +375,12 @@
         private System.ComponentModel.BackgroundWorker backgroundWorkerGenerateFontBitmap;
         private System.Windows.Forms.SaveFileDialog saveFileDialogSelectExportFile;
         private System.Windows.Forms.Button buttonExportFile;
+        private System.Windows.Forms.GroupBox groupBoxOption;
+        private System.Windows.Forms.PictureBox pictureBoxBackgroundColorPreview;
+        private System.Windows.Forms.PictureBox pictureBoxTextColorPreview;
+        private System.Windows.Forms.Button buttonSelectTextColor;
+        private System.Windows.Forms.Button buttonSelectBackgroundColor;
+        private System.Windows.Forms.CheckBox checkBoxEnableBackgroundTransparent;
     }
 }
 

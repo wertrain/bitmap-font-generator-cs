@@ -135,18 +135,12 @@ namespace BitmapFontGenerator
                 System.Drawing.Imaging.ImageFormat format = System.Drawing.Imaging.ImageFormat.Bmp;
                 switch (System.IO.Path.GetExtension(filePath))
                 {
-                    case "bmp": format = System.Drawing.Imaging.ImageFormat.Bmp; break;
-                    case "png": format = System.Drawing.Imaging.ImageFormat.Png; break;
-                    case "gif": format = System.Drawing.Imaging.ImageFormat.Gif; break;
+                    case ".bmp": format = System.Drawing.Imaging.ImageFormat.Bmp; break;
+                    case ".png": format = System.Drawing.Imaging.ImageFormat.Png; break;
+                    case ".gif": format = System.Drawing.Imaging.ImageFormat.Gif; break;
                 }
-                Bitmap exportBitmap = fontBitmap.Clone(
-                    new Rectangle(0, 0, fontBitmap.Width, fontBitmap.Height), 
-                    System.Drawing.Imaging.PixelFormat.Format32bppArgb
-                );
-                if (checkBoxEnableBackgroundTransparent.Checked)
-                    exportBitmap.MakeTransparent(generatorSettings.BackGroundColor);
-                exportBitmap.Save(filePath, format);
-                exportBitmap.Dispose();
+                // fontBitmap.MakeTransparent(); // 背景色に Color.Transparent を設定していると不要っぽい
+                fontBitmap.Save(filePath, format);
             }
         }
 

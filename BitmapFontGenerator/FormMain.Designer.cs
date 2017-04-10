@@ -38,6 +38,12 @@
             this.pictureBoxPreview = new System.Windows.Forms.PictureBox();
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.panelFontSettings = new System.Windows.Forms.Panel();
+            this.groupBoxOption = new System.Windows.Forms.GroupBox();
+            this.checkBoxEnableBackgroundTransparent = new System.Windows.Forms.CheckBox();
+            this.pictureBoxBackgroundColorPreview = new System.Windows.Forms.PictureBox();
+            this.pictureBoxTextColorPreview = new System.Windows.Forms.PictureBox();
+            this.buttonSelectTextColor = new System.Windows.Forms.Button();
+            this.buttonSelectBackgroundColor = new System.Windows.Forms.Button();
             this.groupBoxCodeArea = new System.Windows.Forms.GroupBox();
             this.checkBoxDrawJIS2Kanji = new System.Windows.Forms.CheckBox();
             this.checkBoxDrawJIS1Kanji = new System.Windows.Forms.CheckBox();
@@ -54,12 +60,6 @@
             this.openFileDialogSelectFontFile = new System.Windows.Forms.OpenFileDialog();
             this.backgroundWorkerGenerateFontBitmap = new System.ComponentModel.BackgroundWorker();
             this.saveFileDialogSelectExportFile = new System.Windows.Forms.SaveFileDialog();
-            this.groupBoxOption = new System.Windows.Forms.GroupBox();
-            this.buttonSelectBackgroundColor = new System.Windows.Forms.Button();
-            this.buttonSelectTextColor = new System.Windows.Forms.Button();
-            this.pictureBoxTextColorPreview = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBackgroundColorPreview = new System.Windows.Forms.PictureBox();
-            this.checkBoxEnableBackgroundTransparent = new System.Windows.Forms.CheckBox();
             this.menuStripMain.SuspendLayout();
             this.panelPreview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
@@ -68,13 +68,13 @@
             this.splitContainerMain.Panel2.SuspendLayout();
             this.splitContainerMain.SuspendLayout();
             this.panelFontSettings.SuspendLayout();
+            this.groupBoxOption.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).BeginInit();
             this.groupBoxCodeArea.SuspendLayout();
             this.groupBoxFontSize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFontSize)).BeginInit();
             this.groupBoxFont.SuspendLayout();
-            this.groupBoxOption.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripMain
@@ -146,6 +146,52 @@
             this.panelFontSettings.Controls.Add(this.groupBoxFont);
             resources.ApplyResources(this.panelFontSettings, "panelFontSettings");
             this.panelFontSettings.Name = "panelFontSettings";
+            // 
+            // groupBoxOption
+            // 
+            resources.ApplyResources(this.groupBoxOption, "groupBoxOption");
+            this.groupBoxOption.Controls.Add(this.checkBoxEnableBackgroundTransparent);
+            this.groupBoxOption.Controls.Add(this.pictureBoxBackgroundColorPreview);
+            this.groupBoxOption.Controls.Add(this.pictureBoxTextColorPreview);
+            this.groupBoxOption.Controls.Add(this.buttonSelectTextColor);
+            this.groupBoxOption.Controls.Add(this.buttonSelectBackgroundColor);
+            this.groupBoxOption.Name = "groupBoxOption";
+            this.groupBoxOption.TabStop = false;
+            // 
+            // checkBoxEnableBackgroundTransparent
+            // 
+            resources.ApplyResources(this.checkBoxEnableBackgroundTransparent, "checkBoxEnableBackgroundTransparent");
+            this.checkBoxEnableBackgroundTransparent.Name = "checkBoxEnableBackgroundTransparent";
+            this.checkBoxEnableBackgroundTransparent.UseVisualStyleBackColor = true;
+            this.checkBoxEnableBackgroundTransparent.CheckedChanged += new System.EventHandler(this.checkBoxEnableBackgroundTransparent_CheckedChanged);
+            // 
+            // pictureBoxBackgroundColorPreview
+            // 
+            this.pictureBoxBackgroundColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxBackgroundColorPreview, "pictureBoxBackgroundColorPreview");
+            this.pictureBoxBackgroundColorPreview.Name = "pictureBoxBackgroundColorPreview";
+            this.pictureBoxBackgroundColorPreview.TabStop = false;
+            // 
+            // pictureBoxTextColorPreview
+            // 
+            this.pictureBoxTextColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxTextColorPreview, "pictureBoxTextColorPreview");
+            this.pictureBoxTextColorPreview.Name = "pictureBoxTextColorPreview";
+            this.pictureBoxTextColorPreview.TabStop = false;
+            // 
+            // buttonSelectTextColor
+            // 
+            resources.ApplyResources(this.buttonSelectTextColor, "buttonSelectTextColor");
+            this.buttonSelectTextColor.Name = "buttonSelectTextColor";
+            this.buttonSelectTextColor.UseVisualStyleBackColor = true;
+            this.buttonSelectTextColor.Click += new System.EventHandler(this.buttonSelectTextColor_Click);
+            // 
+            // buttonSelectBackgroundColor
+            // 
+            resources.ApplyResources(this.buttonSelectBackgroundColor, "buttonSelectBackgroundColor");
+            this.buttonSelectBackgroundColor.Name = "buttonSelectBackgroundColor";
+            this.buttonSelectBackgroundColor.UseVisualStyleBackColor = true;
+            this.buttonSelectBackgroundColor.Click += new System.EventHandler(this.buttonSelectBackgroundColor_Click);
             // 
             // groupBoxCodeArea
             // 
@@ -268,52 +314,6 @@
             this.saveFileDialogSelectExportFile.FileName = "export";
             resources.ApplyResources(this.saveFileDialogSelectExportFile, "saveFileDialogSelectExportFile");
             // 
-            // groupBoxOption
-            // 
-            resources.ApplyResources(this.groupBoxOption, "groupBoxOption");
-            this.groupBoxOption.Controls.Add(this.checkBoxEnableBackgroundTransparent);
-            this.groupBoxOption.Controls.Add(this.pictureBoxBackgroundColorPreview);
-            this.groupBoxOption.Controls.Add(this.pictureBoxTextColorPreview);
-            this.groupBoxOption.Controls.Add(this.buttonSelectTextColor);
-            this.groupBoxOption.Controls.Add(this.buttonSelectBackgroundColor);
-            this.groupBoxOption.Name = "groupBoxOption";
-            this.groupBoxOption.TabStop = false;
-            // 
-            // buttonSelectBackgroundColor
-            // 
-            resources.ApplyResources(this.buttonSelectBackgroundColor, "buttonSelectBackgroundColor");
-            this.buttonSelectBackgroundColor.Name = "buttonSelectBackgroundColor";
-            this.buttonSelectBackgroundColor.UseVisualStyleBackColor = true;
-            this.buttonSelectBackgroundColor.Click += new System.EventHandler(this.buttonSelectBackgroundColor_Click);
-            // 
-            // buttonSelectTextColor
-            // 
-            resources.ApplyResources(this.buttonSelectTextColor, "buttonSelectTextColor");
-            this.buttonSelectTextColor.Name = "buttonSelectTextColor";
-            this.buttonSelectTextColor.UseVisualStyleBackColor = true;
-            this.buttonSelectTextColor.Click += new System.EventHandler(this.buttonSelectTextColor_Click);
-            // 
-            // pictureBoxTextColorPreview
-            // 
-            this.pictureBoxTextColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.pictureBoxTextColorPreview, "pictureBoxTextColorPreview");
-            this.pictureBoxTextColorPreview.Name = "pictureBoxTextColorPreview";
-            this.pictureBoxTextColorPreview.TabStop = false;
-            // 
-            // pictureBoxBackgroundColorPreview
-            // 
-            this.pictureBoxBackgroundColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.pictureBoxBackgroundColorPreview, "pictureBoxBackgroundColorPreview");
-            this.pictureBoxBackgroundColorPreview.Name = "pictureBoxBackgroundColorPreview";
-            this.pictureBoxBackgroundColorPreview.TabStop = false;
-            // 
-            // checkBoxEnableBackgroundTransparent
-            // 
-            resources.ApplyResources(this.checkBoxEnableBackgroundTransparent, "checkBoxEnableBackgroundTransparent");
-            this.checkBoxEnableBackgroundTransparent.Name = "checkBoxEnableBackgroundTransparent";
-            this.checkBoxEnableBackgroundTransparent.UseVisualStyleBackColor = true;
-            this.checkBoxEnableBackgroundTransparent.CheckedChanged += new System.EventHandler(this.checkBoxEnableBackgroundTransparent_CheckedChanged);
-            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -333,16 +333,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).EndInit();
             this.splitContainerMain.ResumeLayout(false);
             this.panelFontSettings.ResumeLayout(false);
+            this.groupBoxOption.ResumeLayout(false);
+            this.groupBoxOption.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).EndInit();
             this.groupBoxCodeArea.ResumeLayout(false);
             this.groupBoxCodeArea.PerformLayout();
             this.groupBoxFontSize.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFontSize)).EndInit();
             this.groupBoxFont.ResumeLayout(false);
             this.groupBoxFont.PerformLayout();
-            this.groupBoxOption.ResumeLayout(false);
-            this.groupBoxOption.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -388,7 +388,7 @@
     <value>4</value>
   </data>
   <data name="groupBoxOption.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 338</value>
+    <value>11, 336</value>
   </data>
   <data name="groupBoxOption.Size" type="System.Drawing.Size, System.Drawing">
     <value>258, 113</value>
@@ -565,7 +565,7 @@
     <value>4</value>
   </data>
   <data name="groupBoxCodeArea.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 181</value>
+    <value>11, 179</value>
   </data>
   <data name="groupBoxCodeArea.Size" type="System.Drawing.Size, System.Drawing">
     <value>257, 144</value>

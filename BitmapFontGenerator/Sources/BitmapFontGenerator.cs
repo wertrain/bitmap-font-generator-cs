@@ -142,8 +142,13 @@ namespace BitmapFontGenerator
             Graphics graphics = Graphics.FromImage(bitmap);
             //graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
             //graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            // AntiAliasGridFit にしておくと透過背景にした場合でもきれいに表示される
-            graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
+            if (settings.BackGroundColor == Color.Transparent)
+            {
+                // AntiAliasGridFit にしておくと透過背景にした場合でもきれいに表示される
+                // しかし、外部読み込みのファイルで表示が汚くなるファイルが存在した
+                // 詳しくは調べる必要があるが、とりあえず今は背景色が透過の時だけ適用することにする
+                graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
+            }
             graphics.Clear(settings.BackGroundColor);
 
             using (StringFormat sf = new StringFormat(StringFormat.GenericTypographic))

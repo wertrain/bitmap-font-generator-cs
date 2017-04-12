@@ -259,6 +259,7 @@
             // buttonSelectFont
             // 
             resources.ApplyResources(this.buttonSelectFont, "buttonSelectFont");
+            this.buttonSelectFont.Image = global::BitmapFontGenerator.Properties.Resources.folder;
             this.buttonSelectFont.Name = "buttonSelectFont";
             this.buttonSelectFont.UseVisualStyleBackColor = true;
             this.buttonSelectFont.Click += new System.EventHandler(this.buttonSelectFont_Click);

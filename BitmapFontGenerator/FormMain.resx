@@ -122,7 +122,7 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="toolStripMenuItemExportFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>122, 22</value>
   </data>
   <data name="toolStripMenuItemExportFile.Text" xml:space="preserve">
     <value>Export(&amp;E)</value>
@@ -724,7 +724,7 @@
     <value>14, 51</value>
   </data>
   <data name="textBoxUserFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 19</value>
+    <value>196, 19</value>
   </data>
   <data name="textBoxUserFont.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -748,16 +748,13 @@
     <value>NoControl</value>
   </data>
   <data name="buttonSelectFont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 49</value>
+    <value>216, 49</value>
   </data>
   <data name="buttonSelectFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
+    <value>25, 23</value>
   </data>
   <data name="buttonSelectFont.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="buttonSelectFont.Text" xml:space="preserve">
-    <value>From File (&amp;S)</value>
   </data>
   <data name="&gt;&gt;buttonSelectFont.Name" xml:space="preserve">
     <value>buttonSelectFont</value>
@@ -2688,9 +2685,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAAQPAAAknAAAJJwAAJCIAACQgAAAkAgAAMEBAADB
         AQAAySEAAOZjAADgfwAA4H8AAP//AAD//wAA
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>800, 600</value>

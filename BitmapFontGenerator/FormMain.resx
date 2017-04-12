@@ -122,7 +122,7 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="toolStripMenuItemExportFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="toolStripMenuItemExportFile.Text" xml:space="preserve">
     <value>Export(&amp;E)</value>
@@ -270,6 +270,9 @@
   <data name="checkBoxEnableBackgroundTransparent.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="checkBoxEnableBackgroundTransparent.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="checkBoxEnableBackgroundTransparent.Location" type="System.Drawing.Point, System.Drawing">
     <value>167, 56</value>
   </data>
@@ -318,6 +321,9 @@
   <data name="&gt;&gt;pictureBoxBackgroundColorPreview.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="pictureBoxTextColorPreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="pictureBoxTextColorPreview.Location" type="System.Drawing.Point, System.Drawing">
     <value>14, 22</value>
   </data>
@@ -338,6 +344,9 @@
   </data>
   <data name="&gt;&gt;pictureBoxTextColorPreview.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="buttonSelectTextColor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="buttonSelectTextColor.Location" type="System.Drawing.Point, System.Drawing">
     <value>45, 22</value>
@@ -362,6 +371,9 @@
   </data>
   <data name="&gt;&gt;buttonSelectTextColor.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="buttonSelectBackgroundColor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="buttonSelectBackgroundColor.Location" type="System.Drawing.Point, System.Drawing">
     <value>45, 52</value>
@@ -2677,6 +2689,9 @@
         AQAAySEAAOZjAADgfwAA4H8AAP//AAD//wAA
 </value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>800, 600</value>
   </data>
@@ -2687,12 +2702,6 @@
     <value>fileFToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;fileFToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemExportFile.Name" xml:space="preserve">
-    <value>toolStripMenuItemExportFile</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemExportFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;helpHToolStripMenuItem.Name" xml:space="preserve">
@@ -2718,6 +2727,12 @@
   </data>
   <data name="&gt;&gt;saveFileDialogSelectExportFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItemExportFile.Name" xml:space="preserve">
+    <value>toolStripMenuItemExportFile</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItemExportFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMain</value>

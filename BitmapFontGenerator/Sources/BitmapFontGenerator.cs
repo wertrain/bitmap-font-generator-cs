@@ -20,6 +20,10 @@ namespace BitmapFontGenerator
             private string textFontName;
             private bool[] drawListFlag;
             private int borderLineWidth;
+            private bool textStyleBold;
+            private bool textStyleItalic;
+            private bool textStyleUnderline;
+            private bool textStyleStrikeout;
 
             public Settings()
             {
@@ -28,12 +32,22 @@ namespace BitmapFontGenerator
                 this.textFontSize = 16;
                 this.textMarginSize = (this.TextFontSize / 2);
                 this.textFontName = defaultFontName;
-                this.textFont = new Font(this.textFontName, this.TextFontSize);
+                this.textStyleBold = false;
+                this.textStyleItalic = false;
+                this.textStyleUnderline = false;
+                this.textStyleStrikeout = false;
+                this.textFont = new Font(this.textFontName, this.TextFontSize, this.Style);
                 this.fontFamily = null;
                 this.drawListFlag = new bool[ShiftJisStringList.GetAllList().Length];
                 for (int i = 0; i < this.drawListFlag.Length; ++i) this.drawListFlag[i] = true;
                 this.drawListFlag[this.drawListFlag.Length - 1] = false;
                 this.borderLineWidth = 0;
+            }
+
+            private void createNewFontInstance()
+            {
+                if (this.fontFamily != null) this.textFont = new Font(this.fontFamily, this.textFontSize, this.Style);
+                else if (this.textFontName.Length != 0) this.textFont = new Font(this.textFontName, this.textFontSize, this.Style);
             }
 
             public int TextFontSize
@@ -44,8 +58,7 @@ namespace BitmapFontGenerator
                     this.textFontSize = value;
                     this.textMarginSize = value / 2;
                     this.textFont.Dispose();
-                    if (this.fontFamily != null) this.textFont = new Font(this.fontFamily, this.textFontSize);
-                    else if (this.textFontName.Length != 0) this.textFont = new Font(this.textFontName, this.textFontSize);
+                    createNewFontInstance();
                 }
             }
             public int TextMarginSize
@@ -67,7 +80,7 @@ namespace BitmapFontGenerator
                 {
                     this.textFontName = value;
                     this.textFont.Dispose();
-                    this.textFont = new Font(this.textFontName, this.TextFontSize);
+                    this.textFont = new Font(this.textFontName, this.TextFontSize, this.Style);
                     if (this.fontFamily != null)
                     {
                         this.fontFamily.Dispose();
@@ -100,8 +113,56 @@ namespace BitmapFontGenerator
                     if (this.fontFamily != null)
                         this.fontFamily.Dispose();
                     this.fontFamily = value;
-                    this.textFont = new Font(this.fontFamily, this.TextFontSize);
+                    this.textFont = new Font(this.fontFamily, this.TextFontSize, this.Style);
                     this.textFontName = string.Empty;
+                }
+            }
+            public bool TextStyleBold
+            {
+                get { return this.textStyleBold; }
+                set
+                {
+                    this.textStyleBold = value;
+                    createNewFontInstance();
+                }
+            }
+            public bool TextStyleItalic
+            {
+                get { return this.textStyleItalic; }
+                set
+                {
+                    this.textStyleItalic = value;
+                    createNewFontInstance();
+                }
+            }
+            public bool TextStyleUnderline
+            {
+                get { return this.textStyleUnderline; }
+                set
+                {
+                    this.textStyleUnderline = value;
+                    createNewFontInstance();
+                }
+            }
+            public bool TextStyleStrikeout
+            {
+                get { return this.textStyleStrikeout; }
+                set
+                {
+                    this.textStyleStrikeout = value;
+                    createNewFontInstance();
+                }
+            }
+            private FontStyle Style
+            {
+                get
+                {
+                    FontStyle style = FontStyle.Regular;
+                    if (this.textStyleBold) style |= FontStyle.Bold;
+                    if (this.textStyleItalic) style |= FontStyle.Italic;
+                    if (this.textStyleUnderline) style |= FontStyle.Underline;
+                    if (this.textStyleStrikeout) style |= FontStyle.Strikeout;
+                    return style;
                 }
             }
         };

@@ -186,5 +186,25 @@ namespace BitmapFontGenerator
             generatorSettings.BackGroundColor = checkbox.Checked ? Color.Transparent : pictureBoxBackgroundColorPreview.BackColor;
             runGenerateFontBitmap();
         }
+
+        private void checkBoxTextStyle_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox[] checkboxs = { checkBoxTextBold, checkBoxTextItalic, checkBoxTextUnderline, checkBoxStrikeout };
+            for (int i = 0; i < checkboxs.Length; ++i)
+            {
+                if (checkboxs[i] == sender)
+                {
+                    switch(i)
+                    {
+                        case 0: generatorSettings.TextStyleBold = checkboxs[i].Checked; break;
+                        case 1: generatorSettings.TextStyleItalic = checkboxs[i].Checked; break;
+                        case 2: generatorSettings.TextStyleUnderline = checkboxs[i].Checked; break;
+                        case 3 :generatorSettings.TextStyleStrikeout = checkboxs[i].Checked; break;
+                    }
+                    runGenerateFontBitmap();
+                    break;
+                }
+            }
+        }
     }
 }

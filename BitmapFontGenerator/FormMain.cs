@@ -44,6 +44,9 @@ namespace BitmapFontGenerator
                 comboBoxInstalledFont.SelectedIndex = index;
                 pictureBoxTextColorPreview.BackColor = generatorSettings.TextColor;
                 pictureBoxBackgroundColorPreview.BackColor = generatorSettings.BackGroundColor;
+                if (generatorSettings.TextAlign == BitmapFontGenerator.Settings.TextAligns.AlignCenter) radioButtonAlignCenter.Checked = true;
+                else if (generatorSettings.TextAlign == BitmapFontGenerator.Settings.TextAligns.AlignLeft) radioButtonAlignLeft.Checked = true;
+                else if (generatorSettings.TextAlign == BitmapFontGenerator.Settings.TextAligns.AlignRight) radioButtonAlignRight.Checked = true;
             }
             skipGenerateFontBitmap = false;
 
@@ -154,35 +157,10 @@ namespace BitmapFontGenerator
             exportFile();
         }
 
-        private void buttonSelectTextColor_Click(object sender, EventArgs e)
-        {
-            ColorDialog cd = new ColorDialog();
-            cd.Color = generatorSettings.TextColor;
-            if (cd.ShowDialog() == DialogResult.OK)
-            {
-                generatorSettings.TextColor = cd.Color;
-                pictureBoxTextColorPreview.BackColor = cd.Color;
-                runGenerateFontBitmap();
-            }
-        }
-
-        private void buttonSelectBackgroundColor_Click(object sender, EventArgs e)
-        {
-            ColorDialog cd = new ColorDialog();
-            cd.Color = generatorSettings.BackGroundColor;
-            if (cd.ShowDialog() == DialogResult.OK)
-            {
-                generatorSettings.BackGroundColor = cd.Color;
-                pictureBoxBackgroundColorPreview.BackColor = cd.Color;
-                runGenerateFontBitmap();
-            }
-        }
-
         private void checkBoxEnableBackgroundTransparent_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox checkbox = (CheckBox)sender;
             pictureBoxBackgroundColorPreview.Enabled = !checkbox.Checked;
-            buttonSelectBackgroundColor.Enabled = !checkbox.Checked;
             generatorSettings.BackGroundColor = checkbox.Checked ? Color.Transparent : pictureBoxBackgroundColorPreview.BackColor;
             runGenerateFontBitmap();
         }
@@ -205,6 +183,40 @@ namespace BitmapFontGenerator
                     break;
                 }
             }
+        }
+
+        private void pictureBoxTextColorPreview_Click(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+            cd.Color = generatorSettings.TextColor;
+            if (cd.ShowDialog() == DialogResult.OK)
+            {
+                generatorSettings.TextColor = cd.Color;
+                pictureBoxTextColorPreview.BackColor = cd.Color;
+                runGenerateFontBitmap();
+            }
+        }
+
+        private void pictureBoxBackgroundColorPreview_Click(object sender, EventArgs e)
+        {
+            ColorDialog cd = new ColorDialog();
+            cd.Color = generatorSettings.BackGroundColor;
+            if (cd.ShowDialog() == DialogResult.OK)
+            {
+                generatorSettings.BackGroundColor = cd.Color;
+                pictureBoxBackgroundColorPreview.BackColor = cd.Color;
+                runGenerateFontBitmap();
+            }
+        }
+
+        private void radioButtonAlign_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton[] radioButtons = { radioButtonAlignLeft, radioButtonAlignCenter, radioButtonAlignRight };
+            BitmapFontGenerator.Settings.TextAligns[] aligns = { BitmapFontGenerator.Settings.TextAligns.AlignLeft, BitmapFontGenerator.Settings.TextAligns.AlignCenter, BitmapFontGenerator.Settings.TextAligns.AlignRight };
+            int index = Array.IndexOf(radioButtons, sender);
+            if (!radioButtons[index].Checked) return;
+            generatorSettings.TextAlign = aligns[index];
+            runGenerateFontBitmap();
         }
     }
 }

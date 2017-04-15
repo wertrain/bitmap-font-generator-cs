@@ -121,24 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="toolStripMenuItemExportFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
-  </data>
-  <data name="toolStripMenuItemExportFile.Text" xml:space="preserve">
-    <value>Export(&amp;E)</value>
-  </data>
-  <data name="fileFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 20</value>
-  </data>
-  <data name="fileFToolStripMenuItem.Text" xml:space="preserve">
-    <value>File(&amp;F)</value>
-  </data>
-  <data name="helpHToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
-  </data>
-  <data name="helpHToolStripMenuItem.Text" xml:space="preserve">
-    <value>Help(&amp;H)</value>
-  </data>
   <data name="menuStripMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -163,6 +145,24 @@
   </data>
   <data name="&gt;&gt;menuStripMain.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="fileFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 20</value>
+  </data>
+  <data name="fileFToolStripMenuItem.Text" xml:space="preserve">
+    <value>File(&amp;F)</value>
+  </data>
+  <data name="toolStripMenuItemExportFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 22</value>
+  </data>
+  <data name="toolStripMenuItemExportFile.Text" xml:space="preserve">
+    <value>Export(&amp;E)</value>
+  </data>
+  <data name="helpHToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="helpHToolStripMenuItem.Text" xml:space="preserve">
+    <value>Help(&amp;H)</value>
   </data>
   <metadata name="statusStripMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
@@ -194,7 +194,43 @@
   <data name="panelPreview.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;pictureBoxPreview.Name" xml:space="preserve">
+    <value>pictureBoxPreview</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxPreview.Parent" xml:space="preserve">
+    <value>panelPreview</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxPreview.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelPreview.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panelPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>493, 511</value>
+  </data>
+  <data name="panelPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panelPreview.Name" xml:space="preserve">
+    <value>panelPreview</value>
+  </data>
+  <data name="&gt;&gt;panelPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelPreview.Parent" xml:space="preserve">
+    <value>splitContainerMain.Panel1</value>
+  </data>
+  <data name="&gt;&gt;panelPreview.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="pictureBoxPreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -222,30 +258,6 @@
   <data name="&gt;&gt;pictureBoxPreview.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panelPreview.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panelPreview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panelPreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>493, 511</value>
-  </data>
-  <data name="panelPreview.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;panelPreview.Name" xml:space="preserve">
-    <value>panelPreview</value>
-  </data>
-  <data name="&gt;&gt;panelPreview.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelPreview.Parent" xml:space="preserve">
-    <value>splitContainerMain.Panel1</value>
-  </data>
-  <data name="&gt;&gt;panelPreview.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="splitContainerMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -267,143 +279,23 @@
   <data name="groupBoxOption.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="checkBoxEnableBackgroundTransparent.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
+    <value>checkBox1</value>
   </data>
-  <data name="checkBoxEnableBackgroundTransparent.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBoxEnableBackgroundTransparent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 56</value>
-  </data>
-  <data name="checkBoxEnableBackgroundTransparent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 16</value>
-  </data>
-  <data name="checkBoxEnableBackgroundTransparent.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="checkBoxEnableBackgroundTransparent.Text" xml:space="preserve">
-    <value>Transparent</value>
-  </data>
-  <data name="&gt;&gt;checkBoxEnableBackgroundTransparent.Name" xml:space="preserve">
-    <value>checkBoxEnableBackgroundTransparent</value>
-  </data>
-  <data name="&gt;&gt;checkBoxEnableBackgroundTransparent.Type" xml:space="preserve">
+  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBoxEnableBackgroundTransparent.Parent" xml:space="preserve">
+  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
     <value>groupBoxOption</value>
   </data>
-  <data name="&gt;&gt;checkBoxEnableBackgroundTransparent.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="pictureBoxBackgroundColorPreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBoxBackgroundColorPreview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 52</value>
-  </data>
-  <data name="pictureBoxBackgroundColorPreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="pictureBoxBackgroundColorPreview.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxBackgroundColorPreview.Name" xml:space="preserve">
-    <value>pictureBoxBackgroundColorPreview</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxBackgroundColorPreview.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxBackgroundColorPreview.Parent" xml:space="preserve">
-    <value>groupBoxOption</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxBackgroundColorPreview.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="pictureBoxTextColorPreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pictureBoxTextColorPreview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 22</value>
-  </data>
-  <data name="pictureBoxTextColorPreview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 24</value>
-  </data>
-  <data name="pictureBoxTextColorPreview.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxTextColorPreview.Name" xml:space="preserve">
-    <value>pictureBoxTextColorPreview</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxTextColorPreview.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxTextColorPreview.Parent" xml:space="preserve">
-    <value>groupBoxOption</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxTextColorPreview.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="buttonSelectTextColor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonSelectTextColor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 22</value>
-  </data>
-  <data name="buttonSelectTextColor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 23</value>
-  </data>
-  <data name="buttonSelectTextColor.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="buttonSelectTextColor.Text" xml:space="preserve">
-    <value>Text Color</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectTextColor.Name" xml:space="preserve">
-    <value>buttonSelectTextColor</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectTextColor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectTextColor.Parent" xml:space="preserve">
-    <value>groupBoxOption</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectTextColor.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="buttonSelectBackgroundColor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonSelectBackgroundColor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 52</value>
-  </data>
-  <data name="buttonSelectBackgroundColor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 23</value>
-  </data>
-  <data name="buttonSelectBackgroundColor.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="buttonSelectBackgroundColor.Text" xml:space="preserve">
-    <value>Background Color</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectBackgroundColor.Name" xml:space="preserve">
-    <value>buttonSelectBackgroundColor</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectBackgroundColor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectBackgroundColor.Parent" xml:space="preserve">
-    <value>groupBoxOption</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectBackgroundColor.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="groupBoxOption.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 336</value>
+    <value>11, 303</value>
   </data>
   <data name="groupBoxOption.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 113</value>
+    <value>258, 135</value>
   </data>
   <data name="groupBoxOption.TabIndex" type="System.Int32, mscorlib">
     <value>111</value>
@@ -425,6 +317,597 @@
   </data>
   <data name="groupBoxCodeArea.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawJIS2Kanji.Name" xml:space="preserve">
+    <value>checkBoxDrawJIS2Kanji</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawJIS2Kanji.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawJIS2Kanji.Parent" xml:space="preserve">
+    <value>groupBoxCodeArea</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawJIS2Kanji.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawJIS1Kanji.Name" xml:space="preserve">
+    <value>checkBoxDrawJIS1Kanji</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawJIS1Kanji.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawJIS1Kanji.Parent" xml:space="preserve">
+    <value>groupBoxCodeArea</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawJIS1Kanji.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawPlatformDependent.Name" xml:space="preserve">
+    <value>checkBoxDrawPlatformDependent</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawPlatformDependent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawPlatformDependent.Parent" xml:space="preserve">
+    <value>groupBoxCodeArea</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawPlatformDependent.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawZenkaku.Name" xml:space="preserve">
+    <value>checkBoxDrawZenkaku</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawZenkaku.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawZenkaku.Parent" xml:space="preserve">
+    <value>groupBoxCodeArea</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawZenkaku.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawHankaku.Name" xml:space="preserve">
+    <value>checkBoxDrawHankaku</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawHankaku.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawHankaku.Parent" xml:space="preserve">
+    <value>groupBoxCodeArea</value>
+  </data>
+  <data name="&gt;&gt;checkBoxDrawHankaku.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBoxCodeArea.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 153</value>
+  </data>
+  <data name="groupBoxCodeArea.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 144</value>
+  </data>
+  <data name="groupBoxCodeArea.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="groupBoxCodeArea.Text" xml:space="preserve">
+    <value>Code Blocks</value>
+  </data>
+  <data name="&gt;&gt;groupBoxCodeArea.Name" xml:space="preserve">
+    <value>groupBoxCodeArea</value>
+  </data>
+  <data name="&gt;&gt;groupBoxCodeArea.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxCodeArea.Parent" xml:space="preserve">
+    <value>panelFontSettings</value>
+  </data>
+  <data name="&gt;&gt;groupBoxCodeArea.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonExportFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="buttonExportFile.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="buttonExportFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonExportFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 465</value>
+  </data>
+  <data name="buttonExportFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 28</value>
+  </data>
+  <data name="buttonExportFile.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="buttonExportFile.Text" xml:space="preserve">
+    <value> Export (&amp;E)</value>
+  </data>
+  <data name="buttonExportFile.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;buttonExportFile.Name" xml:space="preserve">
+    <value>buttonExportFile</value>
+  </data>
+  <data name="&gt;&gt;buttonExportFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonExportFile.Parent" xml:space="preserve">
+    <value>panelFontSettings</value>
+  </data>
+  <data name="&gt;&gt;buttonExportFile.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBoxFont.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="radioButtonAlignRight.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="radioButtonAlignRight.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonAlignRight.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButtonAlignRight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>219, 74</value>
+  </data>
+  <data name="radioButtonAlignRight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 22</value>
+  </data>
+  <data name="radioButtonAlignRight.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAlignRight.Name" xml:space="preserve">
+    <value>radioButtonAlignRight</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAlignRight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAlignRight.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAlignRight.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButtonAlignCenter.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="radioButtonAlignCenter.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonAlignCenter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButtonAlignCenter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 74</value>
+  </data>
+  <data name="radioButtonAlignCenter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 22</value>
+  </data>
+  <data name="radioButtonAlignCenter.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAlignCenter.Name" xml:space="preserve">
+    <value>radioButtonAlignCenter</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAlignCenter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAlignCenter.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAlignCenter.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radioButtonAlignLeft.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="radioButtonAlignLeft.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonAlignLeft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 74</value>
+  </data>
+  <data name="radioButtonAlignLeft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 22</value>
+  </data>
+  <data name="radioButtonAlignLeft.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAlignLeft.Name" xml:space="preserve">
+    <value>radioButtonAlignLeft</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAlignLeft.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAlignLeft.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;radioButtonAlignLeft.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="checkBoxStrikeout.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="checkBoxStrikeout.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxStrikeout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxStrikeout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 74</value>
+  </data>
+  <data name="checkBoxStrikeout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 22</value>
+  </data>
+  <data name="checkBoxStrikeout.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;checkBoxStrikeout.Name" xml:space="preserve">
+    <value>checkBoxStrikeout</value>
+  </data>
+  <data name="&gt;&gt;checkBoxStrikeout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxStrikeout.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;checkBoxStrikeout.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="checkBoxTextUnderline.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="checkBoxTextUnderline.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxTextUnderline.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxTextUnderline.Location" type="System.Drawing.Point, System.Drawing">
+    <value>114, 74</value>
+  </data>
+  <data name="checkBoxTextUnderline.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 22</value>
+  </data>
+  <data name="checkBoxTextUnderline.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTextUnderline.Name" xml:space="preserve">
+    <value>checkBoxTextUnderline</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTextUnderline.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTextUnderline.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTextUnderline.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="checkBoxTextItalic.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="checkBoxTextItalic.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxTextItalic.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxTextItalic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 74</value>
+  </data>
+  <data name="checkBoxTextItalic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 22</value>
+  </data>
+  <data name="checkBoxTextItalic.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTextItalic.Name" xml:space="preserve">
+    <value>checkBoxTextItalic</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTextItalic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTextItalic.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTextItalic.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="checkBoxEnableBackgroundTransparent.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxEnableBackgroundTransparent.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxEnableBackgroundTransparent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 108</value>
+  </data>
+  <data name="checkBoxEnableBackgroundTransparent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 16</value>
+  </data>
+  <data name="checkBoxEnableBackgroundTransparent.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="checkBoxEnableBackgroundTransparent.Text" xml:space="preserve">
+    <value>Transparent</value>
+  </data>
+  <data name="&gt;&gt;checkBoxEnableBackgroundTransparent.Name" xml:space="preserve">
+    <value>checkBoxEnableBackgroundTransparent</value>
+  </data>
+  <data name="&gt;&gt;checkBoxEnableBackgroundTransparent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxEnableBackgroundTransparent.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;checkBoxEnableBackgroundTransparent.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="checkBoxTextBold.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="checkBoxTextBold.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxTextBold.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBoxTextBold.Location" type="System.Drawing.Point, System.Drawing">
+    <value>66, 74</value>
+  </data>
+  <data name="checkBoxTextBold.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 22</value>
+  </data>
+  <data name="checkBoxTextBold.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTextBold.Name" xml:space="preserve">
+    <value>checkBoxTextBold</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTextBold.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTextBold.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;checkBoxTextBold.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="pictureBoxBackgroundColorPreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBoxBackgroundColorPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 100</value>
+  </data>
+  <data name="pictureBoxBackgroundColorPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="pictureBoxBackgroundColorPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxBackgroundColorPreview.Name" xml:space="preserve">
+    <value>pictureBoxBackgroundColorPreview</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxBackgroundColorPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxBackgroundColorPreview.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxBackgroundColorPreview.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="numericUpDownFontSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="numericUpDownFontSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 74</value>
+  </data>
+  <data name="numericUpDownFontSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 19</value>
+  </data>
+  <data name="numericUpDownFontSize.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownFontSize.Name" xml:space="preserve">
+    <value>numericUpDownFontSize</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownFontSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownFontSize.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownFontSize.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="pictureBoxTextColorPreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBoxTextColorPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 100</value>
+  </data>
+  <data name="pictureBoxTextColorPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 24</value>
+  </data>
+  <data name="pictureBoxTextColorPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxTextColorPreview.Name" xml:space="preserve">
+    <value>pictureBoxTextColorPreview</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxTextColorPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxTextColorPreview.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxTextColorPreview.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="comboBoxInstalledFont.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="comboBoxInstalledFont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 21</value>
+  </data>
+  <data name="comboBoxInstalledFont.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="comboBoxInstalledFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 20</value>
+  </data>
+  <data name="comboBoxInstalledFont.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInstalledFont.Name" xml:space="preserve">
+    <value>comboBoxInstalledFont</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInstalledFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInstalledFont.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;comboBoxInstalledFont.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="textBoxUserFont.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="textBoxUserFont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 47</value>
+  </data>
+  <data name="textBoxUserFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 19</value>
+  </data>
+  <data name="textBoxUserFont.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBoxUserFont.Name" xml:space="preserve">
+    <value>textBoxUserFont</value>
+  </data>
+  <data name="&gt;&gt;textBoxUserFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxUserFont.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;textBoxUserFont.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="buttonSelectFont.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="buttonSelectFont.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonSelectFont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 45</value>
+  </data>
+  <data name="buttonSelectFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 23</value>
+  </data>
+  <data name="buttonSelectFont.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectFont.Name" xml:space="preserve">
+    <value>buttonSelectFont</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectFont.Parent" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;buttonSelectFont.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="groupBoxFont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 12</value>
+  </data>
+  <data name="groupBoxFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>257, 135</value>
+  </data>
+  <data name="groupBoxFont.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupBoxFont.Text" xml:space="preserve">
+    <value>Font Details</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFont.Name" xml:space="preserve">
+    <value>groupBoxFont</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFont.Parent" xml:space="preserve">
+    <value>panelFontSettings</value>
+  </data>
+  <data name="&gt;&gt;groupBoxFont.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panelFontSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panelFontSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panelFontSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 511</value>
+  </data>
+  <data name="panelFontSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelFontSettings.Name" xml:space="preserve">
+    <value>panelFontSettings</value>
+  </data>
+  <data name="&gt;&gt;panelFontSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelFontSettings.Parent" xml:space="preserve">
+    <value>splitContainerMain.Panel2</value>
+  </data>
+  <data name="&gt;&gt;panelFontSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.Panel2.Name" xml:space="preserve">
+    <value>splitContainerMain.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.Panel2.Parent" xml:space="preserve">
+    <value>splitContainerMain</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainerMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 515</value>
+  </data>
+  <data name="splitContainerMain.SplitterDistance" type="System.Int32, mscorlib">
+    <value>497</value>
+  </data>
+  <data name="splitContainerMain.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.Name" xml:space="preserve">
+    <value>splitContainerMain</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;splitContainerMain.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="checkBoxDrawJIS2Kanji.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -576,372 +1059,6 @@
   <data name="&gt;&gt;checkBoxDrawHankaku.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="groupBoxCodeArea.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 123</value>
-  </data>
-  <data name="groupBoxCodeArea.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 144</value>
-  </data>
-  <data name="groupBoxCodeArea.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="groupBoxCodeArea.Text" xml:space="preserve">
-    <value>Area</value>
-  </data>
-  <data name="&gt;&gt;groupBoxCodeArea.Name" xml:space="preserve">
-    <value>groupBoxCodeArea</value>
-  </data>
-  <data name="&gt;&gt;groupBoxCodeArea.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxCodeArea.Parent" xml:space="preserve">
-    <value>panelFontSettings</value>
-  </data>
-  <data name="&gt;&gt;groupBoxCodeArea.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="buttonExportFile.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
-  </data>
-  <data name="buttonExportFile.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="buttonExportFile.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonExportFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 465</value>
-  </data>
-  <data name="buttonExportFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 28</value>
-  </data>
-  <data name="buttonExportFile.TabIndex" type="System.Int32, mscorlib">
-    <value>110</value>
-  </data>
-  <data name="buttonExportFile.Text" xml:space="preserve">
-    <value> Export (&amp;E)</value>
-  </data>
-  <data name="buttonExportFile.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;buttonExportFile.Name" xml:space="preserve">
-    <value>buttonExportFile</value>
-  </data>
-  <data name="&gt;&gt;buttonExportFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonExportFile.Parent" xml:space="preserve">
-    <value>panelFontSettings</value>
-  </data>
-  <data name="&gt;&gt;buttonExportFile.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="groupBoxFont.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="checkBoxStrikeout.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
-    <value>Button</value>
-  </data>
-  <data name="checkBoxStrikeout.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBoxStrikeout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBoxStrikeout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 72</value>
-  </data>
-  <data name="checkBoxStrikeout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 22</value>
-  </data>
-  <data name="checkBoxStrikeout.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;checkBoxStrikeout.Name" xml:space="preserve">
-    <value>checkBoxStrikeout</value>
-  </data>
-  <data name="&gt;&gt;checkBoxStrikeout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBoxStrikeout.Parent" xml:space="preserve">
-    <value>groupBoxFont</value>
-  </data>
-  <data name="&gt;&gt;checkBoxStrikeout.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="checkBoxTextUnderline.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
-    <value>Button</value>
-  </data>
-  <data name="checkBoxTextUnderline.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBoxTextUnderline.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBoxTextUnderline.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 72</value>
-  </data>
-  <data name="checkBoxTextUnderline.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 22</value>
-  </data>
-  <data name="checkBoxTextUnderline.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;checkBoxTextUnderline.Name" xml:space="preserve">
-    <value>checkBoxTextUnderline</value>
-  </data>
-  <data name="&gt;&gt;checkBoxTextUnderline.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBoxTextUnderline.Parent" xml:space="preserve">
-    <value>groupBoxFont</value>
-  </data>
-  <data name="&gt;&gt;checkBoxTextUnderline.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="checkBoxTextItalic.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
-    <value>Button</value>
-  </data>
-  <data name="checkBoxTextItalic.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBoxTextItalic.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBoxTextItalic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 72</value>
-  </data>
-  <data name="checkBoxTextItalic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 22</value>
-  </data>
-  <data name="checkBoxTextItalic.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;checkBoxTextItalic.Name" xml:space="preserve">
-    <value>checkBoxTextItalic</value>
-  </data>
-  <data name="&gt;&gt;checkBoxTextItalic.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBoxTextItalic.Parent" xml:space="preserve">
-    <value>groupBoxFont</value>
-  </data>
-  <data name="&gt;&gt;checkBoxTextItalic.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="checkBoxTextBold.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
-    <value>Button</value>
-  </data>
-  <data name="checkBoxTextBold.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="checkBoxTextBold.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="checkBoxTextBold.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 72</value>
-  </data>
-  <data name="checkBoxTextBold.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 22</value>
-  </data>
-  <data name="checkBoxTextBold.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;checkBoxTextBold.Name" xml:space="preserve">
-    <value>checkBoxTextBold</value>
-  </data>
-  <data name="&gt;&gt;checkBoxTextBold.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;checkBoxTextBold.Parent" xml:space="preserve">
-    <value>groupBoxFont</value>
-  </data>
-  <data name="&gt;&gt;checkBoxTextBold.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="numericUpDownFontSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="numericUpDownFontSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 74</value>
-  </data>
-  <data name="numericUpDownFontSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 19</value>
-  </data>
-  <data name="numericUpDownFontSize.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownFontSize.Name" xml:space="preserve">
-    <value>numericUpDownFontSize</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownFontSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownFontSize.Parent" xml:space="preserve">
-    <value>groupBoxFont</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownFontSize.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="comboBoxInstalledFont.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="comboBoxInstalledFont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 21</value>
-  </data>
-  <data name="comboBoxInstalledFont.MaxDropDownItems" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="comboBoxInstalledFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 20</value>
-  </data>
-  <data name="comboBoxInstalledFont.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;comboBoxInstalledFont.Name" xml:space="preserve">
-    <value>comboBoxInstalledFont</value>
-  </data>
-  <data name="&gt;&gt;comboBoxInstalledFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBoxInstalledFont.Parent" xml:space="preserve">
-    <value>groupBoxFont</value>
-  </data>
-  <data name="&gt;&gt;comboBoxInstalledFont.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="textBoxUserFont.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="textBoxUserFont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 47</value>
-  </data>
-  <data name="textBoxUserFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 19</value>
-  </data>
-  <data name="textBoxUserFont.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;textBoxUserFont.Name" xml:space="preserve">
-    <value>textBoxUserFont</value>
-  </data>
-  <data name="&gt;&gt;textBoxUserFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxUserFont.Parent" xml:space="preserve">
-    <value>groupBoxFont</value>
-  </data>
-  <data name="&gt;&gt;textBoxUserFont.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="buttonSelectFont.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="buttonSelectFont.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonSelectFont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>216, 45</value>
-  </data>
-  <data name="buttonSelectFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 23</value>
-  </data>
-  <data name="buttonSelectFont.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectFont.Name" xml:space="preserve">
-    <value>buttonSelectFont</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectFont.Parent" xml:space="preserve">
-    <value>groupBoxFont</value>
-  </data>
-  <data name="&gt;&gt;buttonSelectFont.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="groupBoxFont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 12</value>
-  </data>
-  <data name="groupBoxFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>257, 105</value>
-  </data>
-  <data name="groupBoxFont.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="groupBoxFont.Text" xml:space="preserve">
-    <value>Font</value>
-  </data>
-  <data name="&gt;&gt;groupBoxFont.Name" xml:space="preserve">
-    <value>groupBoxFont</value>
-  </data>
-  <data name="&gt;&gt;groupBoxFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxFont.Parent" xml:space="preserve">
-    <value>panelFontSettings</value>
-  </data>
-  <data name="&gt;&gt;groupBoxFont.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="panelFontSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panelFontSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panelFontSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 511</value>
-  </data>
-  <data name="panelFontSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panelFontSettings.Name" xml:space="preserve">
-    <value>panelFontSettings</value>
-  </data>
-  <data name="&gt;&gt;panelFontSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelFontSettings.Parent" xml:space="preserve">
-    <value>splitContainerMain.Panel2</value>
-  </data>
-  <data name="&gt;&gt;panelFontSettings.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.Panel2.Name" xml:space="preserve">
-    <value>splitContainerMain.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.Panel2.Parent" xml:space="preserve">
-    <value>splitContainerMain</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainerMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>784, 515</value>
-  </data>
-  <data name="splitContainerMain.SplitterDistance" type="System.Int32, mscorlib">
-    <value>497</value>
-  </data>
-  <data name="splitContainerMain.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.Name" xml:space="preserve">
-    <value>splitContainerMain</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;splitContainerMain.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="openFileDialogSelectFontFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>268, 17</value>
   </metadata>
@@ -956,6 +1073,33 @@
   </metadata>
   <data name="saveFileDialogSelectExportFile.Filter" xml:space="preserve">
     <value>Bitmap Image (*.bmp)|*.bmp|Portable Network Graphics (*.png)|*.png|Graphics Interchange Format (*.gif)|*.gif</value>
+  </data>
+  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 28</value>
+  </data>
+  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 16</value>
+  </data>
+  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>Show Grid</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
+    <value>checkBox1</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
+    <value>groupBoxOption</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2791,6 +2935,12 @@
   <data name="&gt;&gt;fileFToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;toolStripMenuItemExportFile.Name" xml:space="preserve">
+    <value>toolStripMenuItemExportFile</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItemExportFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;helpHToolStripMenuItem.Name" xml:space="preserve">
     <value>helpHToolStripMenuItem</value>
   </data>
@@ -2814,12 +2964,6 @@
   </data>
   <data name="&gt;&gt;saveFileDialogSelectExportFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemExportFile.Name" xml:space="preserve">
-    <value>toolStripMenuItemExportFile</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItemExportFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMain</value>

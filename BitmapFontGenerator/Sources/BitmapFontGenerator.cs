@@ -11,6 +11,12 @@ namespace BitmapFontGenerator
 
         public class Settings
         {
+            public enum TextAligns
+            {
+                AlignCenter,
+                AlignLeft,
+                AlignRight
+            };
             private Font textFont;
             private FontFamily fontFamily;
             private int textFontSize;
@@ -24,6 +30,7 @@ namespace BitmapFontGenerator
             private bool textStyleItalic;
             private bool textStyleUnderline;
             private bool textStyleStrikeout;
+            private TextAligns textAlign;
 
             public Settings()
             {
@@ -42,6 +49,7 @@ namespace BitmapFontGenerator
                 for (int i = 0; i < this.drawListFlag.Length; ++i) this.drawListFlag[i] = true;
                 this.drawListFlag[this.drawListFlag.Length - 1] = false;
                 this.borderLineWidth = 0;
+                this.textAlign = TextAligns.AlignCenter;
             }
 
             private void createNewFontInstance()
@@ -153,6 +161,11 @@ namespace BitmapFontGenerator
                     createNewFontInstance();
                 }
             }
+            public TextAligns TextAlign
+            {
+                get { return this.textAlign; }
+                set { this.textAlign = value; }
+            }
             private FontStyle Style
             {
                 get
@@ -223,7 +236,10 @@ namespace BitmapFontGenerator
                     for (int i = 0; i < stringList[j].Length; ++i)
                     {
                         SizeF drawnSize = graphics.MeasureString(stringList[j][i], settings.TextFont, charAreaSize.Width, sf);
-                        int marginWidth = (charAreaSize.Width - (int)drawnSize.Width) / 2;
+                        int marginWidth = 0;
+                        if (settings.TextAlign == Settings.TextAligns.AlignCenter) marginWidth = (charAreaSize.Width - (int)drawnSize.Width) / 2;
+                        else if (settings.TextAlign == Settings.TextAligns.AlignLeft) marginWidth = 0;
+                        else if (settings.TextAlign == Settings.TextAligns.AlignRight) marginWidth = (charAreaSize.Width - (int)drawnSize.Width);
                         int marginHeight = (charAreaSize.Height - (int)(drawnSize.Height * 0.95)) / 2; // 0.95 をかけているのは、MeasureString から大きめの高さが返ってきてしまうので苦肉の策
                         graphics.DrawString(
                             stringList[j][i], settings.TextFont,

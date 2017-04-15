@@ -31,52 +31,54 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
             this.fileFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemExportFile = new System.Windows.Forms.ToolStripMenuItem();
             this.helpHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
             this.panelPreview = new System.Windows.Forms.Panel();
+            this.pictureBoxPreview = new System.Windows.Forms.PictureBox();
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.panelFontSettings = new System.Windows.Forms.Panel();
             this.groupBoxOption = new System.Windows.Forms.GroupBox();
             this.checkBoxEnableBackgroundTransparent = new System.Windows.Forms.CheckBox();
-            this.buttonSelectTextColor = new System.Windows.Forms.Button();
-            this.buttonSelectBackgroundColor = new System.Windows.Forms.Button();
+            this.pictureBoxBackgroundColorPreview = new System.Windows.Forms.PictureBox();
+            this.pictureBoxTextColorPreview = new System.Windows.Forms.PictureBox();
             this.groupBoxCodeArea = new System.Windows.Forms.GroupBox();
             this.checkBoxDrawJIS2Kanji = new System.Windows.Forms.CheckBox();
             this.checkBoxDrawJIS1Kanji = new System.Windows.Forms.CheckBox();
             this.checkBoxDrawPlatformDependent = new System.Windows.Forms.CheckBox();
             this.checkBoxDrawZenkaku = new System.Windows.Forms.CheckBox();
             this.checkBoxDrawHankaku = new System.Windows.Forms.CheckBox();
-            this.groupBoxFont = new System.Windows.Forms.GroupBox();
-            this.numericUpDownFontSize = new System.Windows.Forms.NumericUpDown();
-            this.comboBoxInstalledFont = new System.Windows.Forms.ComboBox();
-            this.textBoxUserFont = new System.Windows.Forms.TextBox();
-            this.openFileDialogSelectFontFile = new System.Windows.Forms.OpenFileDialog();
-            this.backgroundWorkerGenerateFontBitmap = new System.ComponentModel.BackgroundWorker();
-            this.saveFileDialogSelectExportFile = new System.Windows.Forms.SaveFileDialog();
-            this.pictureBoxPreview = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBackgroundColorPreview = new System.Windows.Forms.PictureBox();
-            this.pictureBoxTextColorPreview = new System.Windows.Forms.PictureBox();
             this.buttonExportFile = new System.Windows.Forms.Button();
+            this.groupBoxFont = new System.Windows.Forms.GroupBox();
             this.checkBoxStrikeout = new System.Windows.Forms.CheckBox();
             this.checkBoxTextUnderline = new System.Windows.Forms.CheckBox();
             this.checkBoxTextItalic = new System.Windows.Forms.CheckBox();
             this.checkBoxTextBold = new System.Windows.Forms.CheckBox();
+            this.numericUpDownFontSize = new System.Windows.Forms.NumericUpDown();
+            this.comboBoxInstalledFont = new System.Windows.Forms.ComboBox();
+            this.textBoxUserFont = new System.Windows.Forms.TextBox();
             this.buttonSelectFont = new System.Windows.Forms.Button();
-            this.toolStripMenuItemExportFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialogSelectFontFile = new System.Windows.Forms.OpenFileDialog();
+            this.backgroundWorkerGenerateFontBitmap = new System.ComponentModel.BackgroundWorker();
+            this.saveFileDialogSelectExportFile = new System.Windows.Forms.SaveFileDialog();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.radioButtonAlignLeft = new System.Windows.Forms.RadioButton();
+            this.radioButtonAlignCenter = new System.Windows.Forms.RadioButton();
+            this.radioButtonAlignRight = new System.Windows.Forms.RadioButton();
             this.menuStripMain.SuspendLayout();
             this.panelPreview.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).BeginInit();
             this.splitContainerMain.Panel1.SuspendLayout();
             this.splitContainerMain.Panel2.SuspendLayout();
             this.splitContainerMain.SuspendLayout();
             this.panelFontSettings.SuspendLayout();
             this.groupBoxOption.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).BeginInit();
             this.groupBoxCodeArea.SuspendLayout();
             this.groupBoxFont.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFontSize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripMain
@@ -94,6 +96,13 @@
             this.fileFToolStripMenuItem.Name = "fileFToolStripMenuItem";
             resources.ApplyResources(this.fileFToolStripMenuItem, "fileFToolStripMenuItem");
             // 
+            // toolStripMenuItemExportFile
+            // 
+            this.toolStripMenuItemExportFile.Image = global::BitmapFontGenerator.Properties.Resources.application_put;
+            this.toolStripMenuItemExportFile.Name = "toolStripMenuItemExportFile";
+            resources.ApplyResources(this.toolStripMenuItemExportFile, "toolStripMenuItemExportFile");
+            this.toolStripMenuItemExportFile.Click += new System.EventHandler(this.toolStripMenuItemExportFile_Click);
+            // 
             // helpHToolStripMenuItem
             // 
             this.helpHToolStripMenuItem.Name = "helpHToolStripMenuItem";
@@ -109,6 +118,13 @@
             resources.ApplyResources(this.panelPreview, "panelPreview");
             this.panelPreview.Controls.Add(this.pictureBoxPreview);
             this.panelPreview.Name = "panelPreview";
+            // 
+            // pictureBoxPreview
+            // 
+            this.pictureBoxPreview.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.pictureBoxPreview, "pictureBoxPreview");
+            this.pictureBoxPreview.Name = "pictureBoxPreview";
+            this.pictureBoxPreview.TabStop = false;
             // 
             // splitContainerMain
             // 
@@ -137,11 +153,7 @@
             // groupBoxOption
             // 
             resources.ApplyResources(this.groupBoxOption, "groupBoxOption");
-            this.groupBoxOption.Controls.Add(this.checkBoxEnableBackgroundTransparent);
-            this.groupBoxOption.Controls.Add(this.pictureBoxBackgroundColorPreview);
-            this.groupBoxOption.Controls.Add(this.pictureBoxTextColorPreview);
-            this.groupBoxOption.Controls.Add(this.buttonSelectTextColor);
-            this.groupBoxOption.Controls.Add(this.buttonSelectBackgroundColor);
+            this.groupBoxOption.Controls.Add(this.checkBox1);
             this.groupBoxOption.Name = "groupBoxOption";
             this.groupBoxOption.TabStop = false;
             // 
@@ -152,19 +164,21 @@
             this.checkBoxEnableBackgroundTransparent.UseVisualStyleBackColor = true;
             this.checkBoxEnableBackgroundTransparent.CheckedChanged += new System.EventHandler(this.checkBoxEnableBackgroundTransparent_CheckedChanged);
             // 
-            // buttonSelectTextColor
+            // pictureBoxBackgroundColorPreview
             // 
-            resources.ApplyResources(this.buttonSelectTextColor, "buttonSelectTextColor");
-            this.buttonSelectTextColor.Name = "buttonSelectTextColor";
-            this.buttonSelectTextColor.UseVisualStyleBackColor = true;
-            this.buttonSelectTextColor.Click += new System.EventHandler(this.buttonSelectTextColor_Click);
+            this.pictureBoxBackgroundColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxBackgroundColorPreview, "pictureBoxBackgroundColorPreview");
+            this.pictureBoxBackgroundColorPreview.Name = "pictureBoxBackgroundColorPreview";
+            this.pictureBoxBackgroundColorPreview.TabStop = false;
+            this.pictureBoxBackgroundColorPreview.Click += new System.EventHandler(this.pictureBoxBackgroundColorPreview_Click);
             // 
-            // buttonSelectBackgroundColor
+            // pictureBoxTextColorPreview
             // 
-            resources.ApplyResources(this.buttonSelectBackgroundColor, "buttonSelectBackgroundColor");
-            this.buttonSelectBackgroundColor.Name = "buttonSelectBackgroundColor";
-            this.buttonSelectBackgroundColor.UseVisualStyleBackColor = true;
-            this.buttonSelectBackgroundColor.Click += new System.EventHandler(this.buttonSelectBackgroundColor_Click);
+            this.pictureBoxTextColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxTextColorPreview, "pictureBoxTextColorPreview");
+            this.pictureBoxTextColorPreview.Name = "pictureBoxTextColorPreview";
+            this.pictureBoxTextColorPreview.TabStop = false;
+            this.pictureBoxTextColorPreview.Click += new System.EventHandler(this.pictureBoxTextColorPreview_Click);
             // 
             // groupBoxCodeArea
             // 
@@ -212,85 +226,6 @@
             this.checkBoxDrawHankaku.UseVisualStyleBackColor = true;
             this.checkBoxDrawHankaku.CheckedChanged += new System.EventHandler(this.checkBoxDrawFlag_CheckedChanged);
             // 
-            // groupBoxFont
-            // 
-            resources.ApplyResources(this.groupBoxFont, "groupBoxFont");
-            this.groupBoxFont.Controls.Add(this.checkBoxStrikeout);
-            this.groupBoxFont.Controls.Add(this.checkBoxTextUnderline);
-            this.groupBoxFont.Controls.Add(this.checkBoxTextItalic);
-            this.groupBoxFont.Controls.Add(this.checkBoxTextBold);
-            this.groupBoxFont.Controls.Add(this.numericUpDownFontSize);
-            this.groupBoxFont.Controls.Add(this.comboBoxInstalledFont);
-            this.groupBoxFont.Controls.Add(this.textBoxUserFont);
-            this.groupBoxFont.Controls.Add(this.buttonSelectFont);
-            this.groupBoxFont.Name = "groupBoxFont";
-            this.groupBoxFont.TabStop = false;
-            // 
-            // numericUpDownFontSize
-            // 
-            resources.ApplyResources(this.numericUpDownFontSize, "numericUpDownFontSize");
-            this.numericUpDownFontSize.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDownFontSize.Name = "numericUpDownFontSize";
-            this.numericUpDownFontSize.Value = new decimal(new int[] {
-            16,
-            0,
-            0,
-            0});
-            this.numericUpDownFontSize.ValueChanged += new System.EventHandler(this.numericUpDownFontSize_ValueChanged);
-            // 
-            // comboBoxInstalledFont
-            // 
-            resources.ApplyResources(this.comboBoxInstalledFont, "comboBoxInstalledFont");
-            this.comboBoxInstalledFont.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxInstalledFont.FormattingEnabled = true;
-            this.comboBoxInstalledFont.Name = "comboBoxInstalledFont";
-            this.comboBoxInstalledFont.TextChanged += new System.EventHandler(this.comboBoxInstalledFont_TextChanged);
-            // 
-            // textBoxUserFont
-            // 
-            resources.ApplyResources(this.textBoxUserFont, "textBoxUserFont");
-            this.textBoxUserFont.Name = "textBoxUserFont";
-            // 
-            // openFileDialogSelectFontFile
-            // 
-            resources.ApplyResources(this.openFileDialogSelectFontFile, "openFileDialogSelectFontFile");
-            this.openFileDialogSelectFontFile.RestoreDirectory = true;
-            // 
-            // backgroundWorkerGenerateFontBitmap
-            // 
-            this.backgroundWorkerGenerateFontBitmap.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerGenerateFontBitmap_DoWork);
-            this.backgroundWorkerGenerateFontBitmap.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerGenerateFontBitmap_RunWorkerCompleted);
-            // 
-            // saveFileDialogSelectExportFile
-            // 
-            this.saveFileDialogSelectExportFile.FileName = "export";
-            resources.ApplyResources(this.saveFileDialogSelectExportFile, "saveFileDialogSelectExportFile");
-            // 
-            // pictureBoxPreview
-            // 
-            this.pictureBoxPreview.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.pictureBoxPreview, "pictureBoxPreview");
-            this.pictureBoxPreview.Name = "pictureBoxPreview";
-            this.pictureBoxPreview.TabStop = false;
-            // 
-            // pictureBoxBackgroundColorPreview
-            // 
-            this.pictureBoxBackgroundColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.pictureBoxBackgroundColorPreview, "pictureBoxBackgroundColorPreview");
-            this.pictureBoxBackgroundColorPreview.Name = "pictureBoxBackgroundColorPreview";
-            this.pictureBoxBackgroundColorPreview.TabStop = false;
-            // 
-            // pictureBoxTextColorPreview
-            // 
-            this.pictureBoxTextColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.pictureBoxTextColorPreview, "pictureBoxTextColorPreview");
-            this.pictureBoxTextColorPreview.Name = "pictureBoxTextColorPreview";
-            this.pictureBoxTextColorPreview.TabStop = false;
-            // 
             // buttonExportFile
             // 
             resources.ApplyResources(this.buttonExportFile, "buttonExportFile");
@@ -298,6 +233,26 @@
             this.buttonExportFile.Name = "buttonExportFile";
             this.buttonExportFile.UseVisualStyleBackColor = true;
             this.buttonExportFile.Click += new System.EventHandler(this.buttonExportFile_Click);
+            // 
+            // groupBoxFont
+            // 
+            resources.ApplyResources(this.groupBoxFont, "groupBoxFont");
+            this.groupBoxFont.Controls.Add(this.radioButtonAlignRight);
+            this.groupBoxFont.Controls.Add(this.radioButtonAlignCenter);
+            this.groupBoxFont.Controls.Add(this.radioButtonAlignLeft);
+            this.groupBoxFont.Controls.Add(this.checkBoxStrikeout);
+            this.groupBoxFont.Controls.Add(this.checkBoxTextUnderline);
+            this.groupBoxFont.Controls.Add(this.checkBoxTextItalic);
+            this.groupBoxFont.Controls.Add(this.checkBoxEnableBackgroundTransparent);
+            this.groupBoxFont.Controls.Add(this.checkBoxTextBold);
+            this.groupBoxFont.Controls.Add(this.pictureBoxBackgroundColorPreview);
+            this.groupBoxFont.Controls.Add(this.numericUpDownFontSize);
+            this.groupBoxFont.Controls.Add(this.pictureBoxTextColorPreview);
+            this.groupBoxFont.Controls.Add(this.comboBoxInstalledFont);
+            this.groupBoxFont.Controls.Add(this.textBoxUserFont);
+            this.groupBoxFont.Controls.Add(this.buttonSelectFont);
+            this.groupBoxFont.Name = "groupBoxFont";
+            this.groupBoxFont.TabStop = false;
             // 
             // checkBoxStrikeout
             // 
@@ -331,6 +286,35 @@
             this.checkBoxTextBold.UseVisualStyleBackColor = true;
             this.checkBoxTextBold.CheckedChanged += new System.EventHandler(this.checkBoxTextStyle_CheckedChanged);
             // 
+            // numericUpDownFontSize
+            // 
+            resources.ApplyResources(this.numericUpDownFontSize, "numericUpDownFontSize");
+            this.numericUpDownFontSize.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownFontSize.Name = "numericUpDownFontSize";
+            this.numericUpDownFontSize.Value = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            this.numericUpDownFontSize.ValueChanged += new System.EventHandler(this.numericUpDownFontSize_ValueChanged);
+            // 
+            // comboBoxInstalledFont
+            // 
+            resources.ApplyResources(this.comboBoxInstalledFont, "comboBoxInstalledFont");
+            this.comboBoxInstalledFont.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxInstalledFont.FormattingEnabled = true;
+            this.comboBoxInstalledFont.Name = "comboBoxInstalledFont";
+            this.comboBoxInstalledFont.TextChanged += new System.EventHandler(this.comboBoxInstalledFont_TextChanged);
+            // 
+            // textBoxUserFont
+            // 
+            resources.ApplyResources(this.textBoxUserFont, "textBoxUserFont");
+            this.textBoxUserFont.Name = "textBoxUserFont";
+            // 
             // buttonSelectFont
             // 
             resources.ApplyResources(this.buttonSelectFont, "buttonSelectFont");
@@ -339,12 +323,53 @@
             this.buttonSelectFont.UseVisualStyleBackColor = true;
             this.buttonSelectFont.Click += new System.EventHandler(this.buttonSelectFont_Click);
             // 
-            // toolStripMenuItemExportFile
+            // openFileDialogSelectFontFile
             // 
-            this.toolStripMenuItemExportFile.Image = global::BitmapFontGenerator.Properties.Resources.application_put;
-            this.toolStripMenuItemExportFile.Name = "toolStripMenuItemExportFile";
-            resources.ApplyResources(this.toolStripMenuItemExportFile, "toolStripMenuItemExportFile");
-            this.toolStripMenuItemExportFile.Click += new System.EventHandler(this.toolStripMenuItemExportFile_Click);
+            resources.ApplyResources(this.openFileDialogSelectFontFile, "openFileDialogSelectFontFile");
+            this.openFileDialogSelectFontFile.RestoreDirectory = true;
+            // 
+            // backgroundWorkerGenerateFontBitmap
+            // 
+            this.backgroundWorkerGenerateFontBitmap.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerGenerateFontBitmap_DoWork);
+            this.backgroundWorkerGenerateFontBitmap.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerGenerateFontBitmap_RunWorkerCompleted);
+            // 
+            // saveFileDialogSelectExportFile
+            // 
+            this.saveFileDialogSelectExportFile.FileName = "export";
+            resources.ApplyResources(this.saveFileDialogSelectExportFile, "saveFileDialogSelectExportFile");
+            // 
+            // checkBox1
+            // 
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonAlignLeft
+            // 
+            resources.ApplyResources(this.radioButtonAlignLeft, "radioButtonAlignLeft");
+            this.radioButtonAlignLeft.Image = global::BitmapFontGenerator.Properties.Resources.text_align_left;
+            this.radioButtonAlignLeft.Name = "radioButtonAlignLeft";
+            this.radioButtonAlignLeft.TabStop = true;
+            this.radioButtonAlignLeft.UseVisualStyleBackColor = true;
+            this.radioButtonAlignLeft.CheckedChanged += new System.EventHandler(this.radioButtonAlign_CheckedChanged);
+            // 
+            // radioButtonAlignCenter
+            // 
+            resources.ApplyResources(this.radioButtonAlignCenter, "radioButtonAlignCenter");
+            this.radioButtonAlignCenter.Image = global::BitmapFontGenerator.Properties.Resources.text_align_center;
+            this.radioButtonAlignCenter.Name = "radioButtonAlignCenter";
+            this.radioButtonAlignCenter.TabStop = true;
+            this.radioButtonAlignCenter.UseVisualStyleBackColor = true;
+            this.radioButtonAlignCenter.CheckedChanged += new System.EventHandler(this.radioButtonAlign_CheckedChanged);
+            // 
+            // radioButtonAlignRight
+            // 
+            resources.ApplyResources(this.radioButtonAlignRight, "radioButtonAlignRight");
+            this.radioButtonAlignRight.Image = global::BitmapFontGenerator.Properties.Resources.text_align_right;
+            this.radioButtonAlignRight.Name = "radioButtonAlignRight";
+            this.radioButtonAlignRight.TabStop = true;
+            this.radioButtonAlignRight.UseVisualStyleBackColor = true;
+            this.radioButtonAlignRight.CheckedChanged += new System.EventHandler(this.radioButtonAlign_CheckedChanged);
             // 
             // FormMain
             // 
@@ -359,6 +384,7 @@
             this.menuStripMain.PerformLayout();
             this.panelPreview.ResumeLayout(false);
             this.panelPreview.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).EndInit();
             this.splitContainerMain.Panel1.ResumeLayout(false);
             this.splitContainerMain.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerMain)).EndInit();
@@ -366,14 +392,13 @@
             this.panelFontSettings.ResumeLayout(false);
             this.groupBoxOption.ResumeLayout(false);
             this.groupBoxOption.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).EndInit();
             this.groupBoxCodeArea.ResumeLayout(false);
             this.groupBoxCodeArea.PerformLayout();
             this.groupBoxFont.ResumeLayout(false);
             this.groupBoxFont.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFontSize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,13 +433,15 @@
         private System.Windows.Forms.GroupBox groupBoxOption;
         private System.Windows.Forms.PictureBox pictureBoxBackgroundColorPreview;
         private System.Windows.Forms.PictureBox pictureBoxTextColorPreview;
-        private System.Windows.Forms.Button buttonSelectTextColor;
-        private System.Windows.Forms.Button buttonSelectBackgroundColor;
         private System.Windows.Forms.CheckBox checkBoxEnableBackgroundTransparent;
         private System.Windows.Forms.CheckBox checkBoxTextUnderline;
         private System.Windows.Forms.CheckBox checkBoxTextItalic;
         private System.Windows.Forms.CheckBox checkBoxTextBold;
         private System.Windows.Forms.CheckBox checkBoxStrikeout;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.RadioButton radioButtonAlignRight;
+        private System.Windows.Forms.RadioButton radioButtonAlignCenter;
+        private System.Windows.Forms.RadioButton radioButtonAlignLeft;
     }
 }
 

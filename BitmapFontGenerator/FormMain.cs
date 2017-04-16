@@ -47,6 +47,7 @@ namespace BitmapFontGenerator
                 if (generatorSettings.TextAlign == BitmapFontGenerator.Settings.TextAligns.AlignCenter) radioButtonAlignCenter.Checked = true;
                 else if (generatorSettings.TextAlign == BitmapFontGenerator.Settings.TextAligns.AlignLeft) radioButtonAlignLeft.Checked = true;
                 else if (generatorSettings.TextAlign == BitmapFontGenerator.Settings.TextAligns.AlignRight) radioButtonAlignRight.Checked = true;
+                pictureBoxPreview.Enabled = false; // 不要な再更新を抑えるために無効化
             }
             skipGenerateFontBitmap = false;
 
@@ -217,6 +218,39 @@ namespace BitmapFontGenerator
             if (!radioButtons[index].Checked) return;
             generatorSettings.TextAlign = aligns[index];
             runGenerateFontBitmap();
+        }
+
+        private void pictureBoxPreview_Paint(object sender, PaintEventArgs e)
+        {
+            if (!checkBoxShowGrid.Checked) return;
+
+            PictureBox pictureBox = (PictureBox)sender;
+            int borderLineWidth = generatorSettings.BorderLineWidth;
+            int borderLineWidthHalf = (borderLineWidth > 1) ? borderLineWidth / 2 : 0;
+            Pen borderLinePen = new Pen(new SolidBrush(generatorSettings.BorderLineColor), generatorSettings.BorderLineWidth);
+            Size charAreaSize = generatorSettings.CharAreaSize;
+
+            for (int j = 0; j < pictureBox.Height / charAreaSize.Height; ++j)
+            {
+                e.Graphics.DrawLine(
+                    borderLinePen,
+                    0, borderLineWidthHalf + (j * charAreaSize.Height),
+                    pictureBox.Width, borderLineWidthHalf + (j * charAreaSize.Height)
+                );
+                for (int i = 0; i < 16 + 1; ++i)
+                {
+                    e.Graphics.DrawLine(
+                        borderLinePen,
+                        borderLineWidthHalf + (i * charAreaSize.Width), 0,
+                        borderLineWidthHalf + (i * charAreaSize.Width), pictureBox.Height
+                    );
+                }
+            }
+        }
+
+        private void checkBoxShowGrid_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBoxPreview.Refresh();
         }
     }
 }

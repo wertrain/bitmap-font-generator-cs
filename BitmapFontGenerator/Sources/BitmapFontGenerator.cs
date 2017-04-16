@@ -26,6 +26,8 @@ namespace BitmapFontGenerator
             private string textFontName;
             private bool[] drawListFlag;
             private int borderLineWidth;
+            private Color borderLineColor;
+            private bool withBorderLine;
             private bool textStyleBold;
             private bool textStyleItalic;
             private bool textStyleUnderline;
@@ -48,7 +50,9 @@ namespace BitmapFontGenerator
                 this.drawListFlag = new bool[ShiftJisStringList.GetAllList().Length];
                 for (int i = 0; i < this.drawListFlag.Length; ++i) this.drawListFlag[i] = true;
                 this.drawListFlag[this.drawListFlag.Length - 1] = false;
-                this.borderLineWidth = 0;
+                this.borderLineWidth = 1;
+                this.borderLineColor = Color.Black;
+                this.WithBorderLine = false;
                 this.textAlign = TextAligns.AlignCenter;
             }
 
@@ -114,6 +118,16 @@ namespace BitmapFontGenerator
                 get { return this.borderLineWidth; }
                 set { this.borderLineWidth = value; }
             }
+            public Color BorderLineColor
+            {
+                get { return this.borderLineColor; }
+                set { this.borderLineColor = value; }
+            }
+            public bool WithBorderLine
+            {
+                get { return this.withBorderLine; }
+                set { this.withBorderLine = value; }
+            }
             public FontFamily PrivateFont
             {
                 set
@@ -166,6 +180,16 @@ namespace BitmapFontGenerator
                 get { return this.textAlign; }
                 set { this.textAlign = value; }
             }
+            public Size CharAreaSize
+            {
+                get
+                {
+                    return new Size(
+                         (int)System.Math.Ceiling(this.TextFontSize * 1.5f) + this.BorderLineWidth,
+                         (int)System.Math.Ceiling(this.TextFontSize * 1.8f) + this.BorderLineWidth
+                     );
+                }
+            }
             private FontStyle Style
             {
                 get
@@ -201,14 +225,11 @@ namespace BitmapFontGenerator
                 return new Bitmap(1, 1);
             }
 
-            bool withBorder = (settings.BorderLineWidth != 0); // true にすると区切り線を入れる
+            bool withBorder = settings.WithBorderLine;
             int borderLineWidth = settings.BorderLineWidth;
             int borderLineWidthHalf = (borderLineWidth > 1) ? borderLineWidth / 2 : 0;
             bool areaMargin = false; // true にするとリストごとに一行空白を作る
-            Size charAreaSize = new Size(
-                (int)System.Math.Ceiling(settings.TextFontSize * 1.5f) + borderLineWidth, 
-                (int)System.Math.Ceiling(settings.TextFontSize * 1.8f) + borderLineWidth
-            );
+            Size charAreaSize = settings.CharAreaSize;
             int bitmapWidth = charAreaSize.Width * 16 + borderLineWidth;
             int bitmapHeight = charAreaSize.Height * (heightLength + (areaMargin ? (heightListCount-1): 0)) + borderLineWidth;
             Bitmap bitmap = new Bitmap(bitmapWidth, bitmapHeight, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
@@ -259,7 +280,7 @@ namespace BitmapFontGenerator
 
             if (withBorder)
             {
-                Pen borderLinePen = new Pen(new SolidBrush(Color.Black), borderLineWidth);
+                Pen borderLinePen = new Pen(new SolidBrush(settings.BorderLineColor), borderLineWidth);
                 int borderHeightCount = heightLength + stringList.Length + (areaMargin ? 4 : 0);
                 
                 for (int j = 0; j < borderHeightCount; ++j)

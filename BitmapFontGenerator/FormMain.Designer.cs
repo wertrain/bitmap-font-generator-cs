@@ -39,9 +39,7 @@
             this.splitContainerMain = new System.Windows.Forms.SplitContainer();
             this.panelFontSettings = new System.Windows.Forms.Panel();
             this.groupBoxOption = new System.Windows.Forms.GroupBox();
-            this.checkBoxEnableBackgroundTransparent = new System.Windows.Forms.CheckBox();
-            this.pictureBoxBackgroundColorPreview = new System.Windows.Forms.PictureBox();
-            this.pictureBoxTextColorPreview = new System.Windows.Forms.PictureBox();
+            this.checkBoxShowGrid = new System.Windows.Forms.CheckBox();
             this.groupBoxCodeArea = new System.Windows.Forms.GroupBox();
             this.checkBoxDrawJIS2Kanji = new System.Windows.Forms.CheckBox();
             this.checkBoxDrawJIS1Kanji = new System.Windows.Forms.CheckBox();
@@ -50,21 +48,23 @@
             this.checkBoxDrawHankaku = new System.Windows.Forms.CheckBox();
             this.buttonExportFile = new System.Windows.Forms.Button();
             this.groupBoxFont = new System.Windows.Forms.GroupBox();
+            this.radioButtonAlignRight = new System.Windows.Forms.RadioButton();
+            this.radioButtonAlignCenter = new System.Windows.Forms.RadioButton();
+            this.radioButtonAlignLeft = new System.Windows.Forms.RadioButton();
             this.checkBoxStrikeout = new System.Windows.Forms.CheckBox();
             this.checkBoxTextUnderline = new System.Windows.Forms.CheckBox();
             this.checkBoxTextItalic = new System.Windows.Forms.CheckBox();
+            this.checkBoxEnableBackgroundTransparent = new System.Windows.Forms.CheckBox();
             this.checkBoxTextBold = new System.Windows.Forms.CheckBox();
+            this.pictureBoxBackgroundColorPreview = new System.Windows.Forms.PictureBox();
             this.numericUpDownFontSize = new System.Windows.Forms.NumericUpDown();
+            this.pictureBoxTextColorPreview = new System.Windows.Forms.PictureBox();
             this.comboBoxInstalledFont = new System.Windows.Forms.ComboBox();
             this.textBoxUserFont = new System.Windows.Forms.TextBox();
             this.buttonSelectFont = new System.Windows.Forms.Button();
             this.openFileDialogSelectFontFile = new System.Windows.Forms.OpenFileDialog();
             this.backgroundWorkerGenerateFontBitmap = new System.ComponentModel.BackgroundWorker();
             this.saveFileDialogSelectExportFile = new System.Windows.Forms.SaveFileDialog();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.radioButtonAlignLeft = new System.Windows.Forms.RadioButton();
-            this.radioButtonAlignCenter = new System.Windows.Forms.RadioButton();
-            this.radioButtonAlignRight = new System.Windows.Forms.RadioButton();
             this.menuStripMain.SuspendLayout();
             this.panelPreview.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPreview)).BeginInit();
@@ -74,11 +74,11 @@
             this.splitContainerMain.SuspendLayout();
             this.panelFontSettings.SuspendLayout();
             this.groupBoxOption.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).BeginInit();
             this.groupBoxCodeArea.SuspendLayout();
             this.groupBoxFont.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFontSize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStripMain
@@ -125,6 +125,7 @@
             resources.ApplyResources(this.pictureBoxPreview, "pictureBoxPreview");
             this.pictureBoxPreview.Name = "pictureBoxPreview";
             this.pictureBoxPreview.TabStop = false;
+            this.pictureBoxPreview.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBoxPreview_Paint);
             // 
             // splitContainerMain
             // 
@@ -153,32 +154,16 @@
             // groupBoxOption
             // 
             resources.ApplyResources(this.groupBoxOption, "groupBoxOption");
-            this.groupBoxOption.Controls.Add(this.checkBox1);
+            this.groupBoxOption.Controls.Add(this.checkBoxShowGrid);
             this.groupBoxOption.Name = "groupBoxOption";
             this.groupBoxOption.TabStop = false;
             // 
-            // checkBoxEnableBackgroundTransparent
+            // checkBoxShowGrid
             // 
-            resources.ApplyResources(this.checkBoxEnableBackgroundTransparent, "checkBoxEnableBackgroundTransparent");
-            this.checkBoxEnableBackgroundTransparent.Name = "checkBoxEnableBackgroundTransparent";
-            this.checkBoxEnableBackgroundTransparent.UseVisualStyleBackColor = true;
-            this.checkBoxEnableBackgroundTransparent.CheckedChanged += new System.EventHandler(this.checkBoxEnableBackgroundTransparent_CheckedChanged);
-            // 
-            // pictureBoxBackgroundColorPreview
-            // 
-            this.pictureBoxBackgroundColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.pictureBoxBackgroundColorPreview, "pictureBoxBackgroundColorPreview");
-            this.pictureBoxBackgroundColorPreview.Name = "pictureBoxBackgroundColorPreview";
-            this.pictureBoxBackgroundColorPreview.TabStop = false;
-            this.pictureBoxBackgroundColorPreview.Click += new System.EventHandler(this.pictureBoxBackgroundColorPreview_Click);
-            // 
-            // pictureBoxTextColorPreview
-            // 
-            this.pictureBoxTextColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.pictureBoxTextColorPreview, "pictureBoxTextColorPreview");
-            this.pictureBoxTextColorPreview.Name = "pictureBoxTextColorPreview";
-            this.pictureBoxTextColorPreview.TabStop = false;
-            this.pictureBoxTextColorPreview.Click += new System.EventHandler(this.pictureBoxTextColorPreview_Click);
+            resources.ApplyResources(this.checkBoxShowGrid, "checkBoxShowGrid");
+            this.checkBoxShowGrid.Name = "checkBoxShowGrid";
+            this.checkBoxShowGrid.UseVisualStyleBackColor = true;
+            this.checkBoxShowGrid.CheckedChanged += new System.EventHandler(this.checkBoxShowGrid_CheckedChanged);
             // 
             // groupBoxCodeArea
             // 
@@ -254,6 +239,33 @@
             this.groupBoxFont.Name = "groupBoxFont";
             this.groupBoxFont.TabStop = false;
             // 
+            // radioButtonAlignRight
+            // 
+            resources.ApplyResources(this.radioButtonAlignRight, "radioButtonAlignRight");
+            this.radioButtonAlignRight.Image = global::BitmapFontGenerator.Properties.Resources.text_align_right;
+            this.radioButtonAlignRight.Name = "radioButtonAlignRight";
+            this.radioButtonAlignRight.TabStop = true;
+            this.radioButtonAlignRight.UseVisualStyleBackColor = true;
+            this.radioButtonAlignRight.CheckedChanged += new System.EventHandler(this.radioButtonAlign_CheckedChanged);
+            // 
+            // radioButtonAlignCenter
+            // 
+            resources.ApplyResources(this.radioButtonAlignCenter, "radioButtonAlignCenter");
+            this.radioButtonAlignCenter.Image = global::BitmapFontGenerator.Properties.Resources.text_align_center;
+            this.radioButtonAlignCenter.Name = "radioButtonAlignCenter";
+            this.radioButtonAlignCenter.TabStop = true;
+            this.radioButtonAlignCenter.UseVisualStyleBackColor = true;
+            this.radioButtonAlignCenter.CheckedChanged += new System.EventHandler(this.radioButtonAlign_CheckedChanged);
+            // 
+            // radioButtonAlignLeft
+            // 
+            resources.ApplyResources(this.radioButtonAlignLeft, "radioButtonAlignLeft");
+            this.radioButtonAlignLeft.Image = global::BitmapFontGenerator.Properties.Resources.text_align_left;
+            this.radioButtonAlignLeft.Name = "radioButtonAlignLeft";
+            this.radioButtonAlignLeft.TabStop = true;
+            this.radioButtonAlignLeft.UseVisualStyleBackColor = true;
+            this.radioButtonAlignLeft.CheckedChanged += new System.EventHandler(this.radioButtonAlign_CheckedChanged);
+            // 
             // checkBoxStrikeout
             // 
             resources.ApplyResources(this.checkBoxStrikeout, "checkBoxStrikeout");
@@ -278,6 +290,13 @@
             this.checkBoxTextItalic.UseVisualStyleBackColor = true;
             this.checkBoxTextItalic.CheckedChanged += new System.EventHandler(this.checkBoxTextStyle_CheckedChanged);
             // 
+            // checkBoxEnableBackgroundTransparent
+            // 
+            resources.ApplyResources(this.checkBoxEnableBackgroundTransparent, "checkBoxEnableBackgroundTransparent");
+            this.checkBoxEnableBackgroundTransparent.Name = "checkBoxEnableBackgroundTransparent";
+            this.checkBoxEnableBackgroundTransparent.UseVisualStyleBackColor = true;
+            this.checkBoxEnableBackgroundTransparent.CheckedChanged += new System.EventHandler(this.checkBoxEnableBackgroundTransparent_CheckedChanged);
+            // 
             // checkBoxTextBold
             // 
             resources.ApplyResources(this.checkBoxTextBold, "checkBoxTextBold");
@@ -285,6 +304,14 @@
             this.checkBoxTextBold.Name = "checkBoxTextBold";
             this.checkBoxTextBold.UseVisualStyleBackColor = true;
             this.checkBoxTextBold.CheckedChanged += new System.EventHandler(this.checkBoxTextStyle_CheckedChanged);
+            // 
+            // pictureBoxBackgroundColorPreview
+            // 
+            this.pictureBoxBackgroundColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxBackgroundColorPreview, "pictureBoxBackgroundColorPreview");
+            this.pictureBoxBackgroundColorPreview.Name = "pictureBoxBackgroundColorPreview";
+            this.pictureBoxBackgroundColorPreview.TabStop = false;
+            this.pictureBoxBackgroundColorPreview.Click += new System.EventHandler(this.pictureBoxBackgroundColorPreview_Click);
             // 
             // numericUpDownFontSize
             // 
@@ -301,6 +328,14 @@
             0,
             0});
             this.numericUpDownFontSize.ValueChanged += new System.EventHandler(this.numericUpDownFontSize_ValueChanged);
+            // 
+            // pictureBoxTextColorPreview
+            // 
+            this.pictureBoxTextColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxTextColorPreview, "pictureBoxTextColorPreview");
+            this.pictureBoxTextColorPreview.Name = "pictureBoxTextColorPreview";
+            this.pictureBoxTextColorPreview.TabStop = false;
+            this.pictureBoxTextColorPreview.Click += new System.EventHandler(this.pictureBoxTextColorPreview_Click);
             // 
             // comboBoxInstalledFont
             // 
@@ -338,39 +373,6 @@
             this.saveFileDialogSelectExportFile.FileName = "export";
             resources.ApplyResources(this.saveFileDialogSelectExportFile, "saveFileDialogSelectExportFile");
             // 
-            // checkBox1
-            // 
-            resources.ApplyResources(this.checkBox1, "checkBox1");
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonAlignLeft
-            // 
-            resources.ApplyResources(this.radioButtonAlignLeft, "radioButtonAlignLeft");
-            this.radioButtonAlignLeft.Image = global::BitmapFontGenerator.Properties.Resources.text_align_left;
-            this.radioButtonAlignLeft.Name = "radioButtonAlignLeft";
-            this.radioButtonAlignLeft.TabStop = true;
-            this.radioButtonAlignLeft.UseVisualStyleBackColor = true;
-            this.radioButtonAlignLeft.CheckedChanged += new System.EventHandler(this.radioButtonAlign_CheckedChanged);
-            // 
-            // radioButtonAlignCenter
-            // 
-            resources.ApplyResources(this.radioButtonAlignCenter, "radioButtonAlignCenter");
-            this.radioButtonAlignCenter.Image = global::BitmapFontGenerator.Properties.Resources.text_align_center;
-            this.radioButtonAlignCenter.Name = "radioButtonAlignCenter";
-            this.radioButtonAlignCenter.TabStop = true;
-            this.radioButtonAlignCenter.UseVisualStyleBackColor = true;
-            this.radioButtonAlignCenter.CheckedChanged += new System.EventHandler(this.radioButtonAlign_CheckedChanged);
-            // 
-            // radioButtonAlignRight
-            // 
-            resources.ApplyResources(this.radioButtonAlignRight, "radioButtonAlignRight");
-            this.radioButtonAlignRight.Image = global::BitmapFontGenerator.Properties.Resources.text_align_right;
-            this.radioButtonAlignRight.Name = "radioButtonAlignRight";
-            this.radioButtonAlignRight.TabStop = true;
-            this.radioButtonAlignRight.UseVisualStyleBackColor = true;
-            this.radioButtonAlignRight.CheckedChanged += new System.EventHandler(this.radioButtonAlign_CheckedChanged);
-            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -392,13 +394,13 @@
             this.panelFontSettings.ResumeLayout(false);
             this.groupBoxOption.ResumeLayout(false);
             this.groupBoxOption.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).EndInit();
             this.groupBoxCodeArea.ResumeLayout(false);
             this.groupBoxCodeArea.PerformLayout();
             this.groupBoxFont.ResumeLayout(false);
             this.groupBoxFont.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFontSize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,7 +440,7 @@
         private System.Windows.Forms.CheckBox checkBoxTextItalic;
         private System.Windows.Forms.CheckBox checkBoxTextBold;
         private System.Windows.Forms.CheckBox checkBoxStrikeout;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxShowGrid;
         private System.Windows.Forms.RadioButton radioButtonAlignRight;
         private System.Windows.Forms.RadioButton radioButtonAlignCenter;
         private System.Windows.Forms.RadioButton radioButtonAlignLeft;

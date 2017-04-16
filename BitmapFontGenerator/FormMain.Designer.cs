@@ -47,7 +47,7 @@
             this.checkBoxDrawZenkaku = new System.Windows.Forms.CheckBox();
             this.checkBoxDrawHankaku = new System.Windows.Forms.CheckBox();
             this.buttonExportFile = new System.Windows.Forms.Button();
-            this.groupBoxFont = new System.Windows.Forms.GroupBox();
+            this.groupBoxFontDetails = new System.Windows.Forms.GroupBox();
             this.radioButtonAlignRight = new System.Windows.Forms.RadioButton();
             this.radioButtonAlignCenter = new System.Windows.Forms.RadioButton();
             this.radioButtonAlignLeft = new System.Windows.Forms.RadioButton();
@@ -75,7 +75,7 @@
             this.panelFontSettings.SuspendLayout();
             this.groupBoxOption.SuspendLayout();
             this.groupBoxCodeArea.SuspendLayout();
-            this.groupBoxFont.SuspendLayout();
+            this.groupBoxFontDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFontSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).BeginInit();
@@ -147,7 +147,7 @@
             this.panelFontSettings.Controls.Add(this.groupBoxOption);
             this.panelFontSettings.Controls.Add(this.groupBoxCodeArea);
             this.panelFontSettings.Controls.Add(this.buttonExportFile);
-            this.panelFontSettings.Controls.Add(this.groupBoxFont);
+            this.panelFontSettings.Controls.Add(this.groupBoxFontDetails);
             resources.ApplyResources(this.panelFontSettings, "panelFontSettings");
             this.panelFontSettings.Name = "panelFontSettings";
             // 
@@ -219,25 +219,25 @@
             this.buttonExportFile.UseVisualStyleBackColor = true;
             this.buttonExportFile.Click += new System.EventHandler(this.buttonExportFile_Click);
             // 
-            // groupBoxFont
+            // groupBoxFontDetails
             // 
-            resources.ApplyResources(this.groupBoxFont, "groupBoxFont");
-            this.groupBoxFont.Controls.Add(this.radioButtonAlignRight);
-            this.groupBoxFont.Controls.Add(this.radioButtonAlignCenter);
-            this.groupBoxFont.Controls.Add(this.radioButtonAlignLeft);
-            this.groupBoxFont.Controls.Add(this.checkBoxStrikeout);
-            this.groupBoxFont.Controls.Add(this.checkBoxTextUnderline);
-            this.groupBoxFont.Controls.Add(this.checkBoxTextItalic);
-            this.groupBoxFont.Controls.Add(this.checkBoxEnableBackgroundTransparent);
-            this.groupBoxFont.Controls.Add(this.checkBoxTextBold);
-            this.groupBoxFont.Controls.Add(this.pictureBoxBackgroundColorPreview);
-            this.groupBoxFont.Controls.Add(this.numericUpDownFontSize);
-            this.groupBoxFont.Controls.Add(this.pictureBoxTextColorPreview);
-            this.groupBoxFont.Controls.Add(this.comboBoxInstalledFont);
-            this.groupBoxFont.Controls.Add(this.textBoxUserFont);
-            this.groupBoxFont.Controls.Add(this.buttonSelectFont);
-            this.groupBoxFont.Name = "groupBoxFont";
-            this.groupBoxFont.TabStop = false;
+            resources.ApplyResources(this.groupBoxFontDetails, "groupBoxFontDetails");
+            this.groupBoxFontDetails.Controls.Add(this.radioButtonAlignRight);
+            this.groupBoxFontDetails.Controls.Add(this.radioButtonAlignCenter);
+            this.groupBoxFontDetails.Controls.Add(this.radioButtonAlignLeft);
+            this.groupBoxFontDetails.Controls.Add(this.checkBoxStrikeout);
+            this.groupBoxFontDetails.Controls.Add(this.checkBoxTextUnderline);
+            this.groupBoxFontDetails.Controls.Add(this.checkBoxTextItalic);
+            this.groupBoxFontDetails.Controls.Add(this.checkBoxEnableBackgroundTransparent);
+            this.groupBoxFontDetails.Controls.Add(this.checkBoxTextBold);
+            this.groupBoxFontDetails.Controls.Add(this.pictureBoxBackgroundColorPreview);
+            this.groupBoxFontDetails.Controls.Add(this.numericUpDownFontSize);
+            this.groupBoxFontDetails.Controls.Add(this.pictureBoxTextColorPreview);
+            this.groupBoxFontDetails.Controls.Add(this.comboBoxInstalledFont);
+            this.groupBoxFontDetails.Controls.Add(this.textBoxUserFont);
+            this.groupBoxFontDetails.Controls.Add(this.buttonSelectFont);
+            this.groupBoxFontDetails.Name = "groupBoxFontDetails";
+            this.groupBoxFontDetails.TabStop = false;
             // 
             // radioButtonAlignRight
             // 
@@ -396,8 +396,8 @@
             this.groupBoxOption.PerformLayout();
             this.groupBoxCodeArea.ResumeLayout(false);
             this.groupBoxCodeArea.PerformLayout();
-            this.groupBoxFont.ResumeLayout(false);
-            this.groupBoxFont.PerformLayout();
+            this.groupBoxFontDetails.ResumeLayout(false);
+            this.groupBoxFontDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundColorPreview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownFontSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTextColorPreview)).EndInit();
@@ -417,7 +417,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExportFile;
         private System.Windows.Forms.SplitContainer splitContainerMain;
         private System.Windows.Forms.Panel panelFontSettings;
-        private System.Windows.Forms.GroupBox groupBoxFont;
+        private System.Windows.Forms.GroupBox groupBoxFontDetails;
         private System.Windows.Forms.ComboBox comboBoxInstalledFont;
         private System.Windows.Forms.TextBox textBoxUserFont;
         private System.Windows.Forms.Button buttonSelectFont;

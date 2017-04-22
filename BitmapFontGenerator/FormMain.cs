@@ -29,6 +29,14 @@ namespace BitmapFontGenerator
                 }
             }
 
+            // バージョン情報をタイトルに記載
+            {
+                System.Reflection.Assembly mainAssembly = System.Reflection.Assembly.GetEntryAssembly();
+                System.Reflection.AssemblyName mainAssemName = mainAssembly.GetName();
+                Version appVersion = mainAssemName.Version;
+                Text = Text + " " + appVersion;
+            }
+
             bitmapFontGenerator = new BitmapFontGenerator();
             generatorSettings = new BitmapFontGenerator.Settings();
             generatorSettings.TextFontSize = Decimal.ToInt32(numericUpDownFontSize.Value);

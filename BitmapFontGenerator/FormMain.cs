@@ -238,7 +238,7 @@ namespace BitmapFontGenerator
             Pen borderLinePen = new Pen(new SolidBrush(generatorSettings.BorderLineColor), generatorSettings.BorderLineWidth);
             Size charAreaSize = generatorSettings.CharAreaSize;
 
-            for (int j = 0; j < pictureBox.Height / charAreaSize.Height; ++j)
+            for (int j = 0; j < (pictureBox.Height / charAreaSize.Height) + 1; ++j)
             {
                 e.Graphics.DrawLine(
                     borderLinePen,

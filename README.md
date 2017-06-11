@@ -6,3 +6,7 @@
 
 ## Download
 [Version 1.0.0.0](https://wertrain.github.io/software/BitmapFontGenerator.zip "BitmapFontGenerator.zip")
+
+### 関連
+このツールは、主に下記のプロジェクトのような用途で使用するために作成しました。  
+[https://github.com/wertrain/bitmap-font-putter-cpp](https://github.com/wertrain/bitmap-font-putter-cpp)
